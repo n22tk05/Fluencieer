@@ -1,166 +1,141 @@
 # Fluencieer 🎙️⚡
 
-> **Real-Time Meeting Speaking Teleprompter & Anti-Hesitation Copilot for Global Tech Negotiations**  
-> *Giải pháp trợ lý phát biểu và máy nhắc chữ thông minh nhúng thời gian thực cho Google Meet / Zoom — Triệt tiêu ngập ngừng, giải phóng phản xạ nói tiếng Anh chuyên nghiệp.*
+> **Real-Time Meeting Speaking Teleprompter & Anti-Hesitation Copilot on Google Meet**  
+> *Máy nhắc chữ phân nhánh thời gian thực nhúng thanh bên Google Meet, tự động bắt nhịp ngắt giọng tự nhiên để gợi ý 3 nhánh phát biểu tiếp theo căn thẳng cột; cho phép khóa nhánh bằng giọng nói hoàn toàn rảnh tay và xử lý 100% ngoại tuyến nhằm duy trì dòng chảy hội thoại tiếng Anh lưu loát trong mọi tình huống cuộc họp.*
 
 ---
 
-## 🎯 1. Tổng quan & Triết lý thiết kế (Overview)
+## 🎯 1. Tầm nhìn & Định vị Sản phẩm (Vision & Positioning)
 
-**Fluencieer** được thiết kế đặc thù cho kỹ sư, Tech Lead, Solution Architect và chuyên gia công nghệ tham gia các cuộc họp kỹ thuật, đàm phán hợp đồng hoặc bảo vệ phương án kiến trúc bằng tiếng Anh với đối tác quốc tế.
+Trong môi trường làm việc toàn cầu, người đi làm và chuyên gia công nghệ thường có năng lực chuyên môn và vốn từ vựng đọc hiểu rất tốt, nhưng lại gặp điểm nghẽn **phản xạ truy xuất từ vựng chủ động (Active Vocabulary Retrieval Block)** khi đối thoại trực tiếp bằng tiếng Anh dưới áp lực thời gian. 
 
-Hệ thống giải quyết dứt điểm nghịch lý: **Vốn từ vựng đọc hiểu (Passive Comprehension) rất tốt nhưng lại bị nghẽn truy xuất từ vựng chủ động (Active Speaking Block)** khi đối thoại trực tiếp dưới áp lực cao.
+Chỉ một khoảng khựng 2–3 giây để tìm từ nối, thuật ngữ hay cách diễn đạt tự nhiên cũng dễ khiến người nói bị ngắt lời, phải chêm âm đệm kéo dài hoặc lén rời mắt khỏi camera để tra cứu từ điển, làm gián đoạn nhịp trao đổi và giảm tính thuyết phục.
+
+**Fluencieer** được định vị là **trợ lý nhắc chữ phân nhánh thời gian thực** phục vụ **mọi cuộc họp trực tuyến trên Google Meet** (họp định kỳ nội bộ đa quốc gia, báo cáo tiến độ dự án, thảo luận giải pháp, phiên hỏi đáp bất ngờ cho đến đàm phán hợp tác), giải quyết dứt điểm các hạn chế của phần mềm nhắc chữ cuộn văn bản tĩnh hoặc các công cụ dịch thuật truyền thống:
+
+```
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                             FLUENCIEER INTERACTION FLOW                          │
+├───────────────────────┬────────────────────────────┬─────────────────────────────┤
+│ 1. CHUẨN BỊ (PRE-MEET)│ 2. ĐỐI PHƯƠNG NÓI (LISTEN) │ 3. PHÁT BIỂU (SPEAK & SNAP) │
+│ Nạp ghi chú / tài liệu│ Đọc phụ đề Meet (< 20ms)   │ Bắt nhịp ngắt giọng (200ms) │
+│ Trích xuất từ vựng    │ Vùng gợi ý giữ tĩnh        │ Hiện 3 nhánh thẳng cột (<50ms)│
+│ Prefill ngữ cảnh RAM  │ Giữ trọn sự tập trung      │ Khóa nhánh rảnh tay (<100ms)│
+└───────────────────────┴────────────────────────────┴─────────────────────────────┘
+```
+
+---
+
+## ✨ 2. Tính năng Cốt lõi (Core Capabilities)
+
+### 🌿 Cây gợi ý tiền tố căn thẳng cột (Prefix-Aligned Tree)
+- Giữ trọn vẹn cụm tiền tố người dùng vừa nói ở dòng `[1]`, các dòng `[2]` và `[3]` được tự động thụt lề căn thẳng hàng theo trục dọc từ vị trí từ tiếp theo.
+- Triệt tiêu hoàn toàn rác mắt thị giác, không lặp lại từ đã nói, giúp người dùng lướt trọn 3 nhánh trong một ánh nhìn:
+  ```text
+  [1] We need to  ▸ clarify the project scope        ▸ before finalizing...
+  [2]             ▸ update the implementation status  ▸ with all stakeholders...
+  [3]             ▸ resolve the current bottleneck    ▸ to meet our deadline...
+  ```
+
+### ⏱️ Bắt nhịp ngắt giọng tự nhiên & Suy luận một lượt (< 50ms)
+- Cảm biến âm thanh (VAD) phát hiện khoảng dừng lấy hơi hoặc ngập ngừng tự nhiên **200 miligiây** của người dùng để kích hoạt một lượt suy luận duy nhất (Single-pass top-K logits branching) trên mô hình cục bộ.
+- Sinh song song 3 nhánh cụm từ (mỗi nhánh 3–4 token) kèm giải nghĩa ngắn gọn của từ khóa chính trong **dưới 50 miligiây**, hiển thị kịp thời trước khi kết thúc nhịp dừng lấy hơi tự nhiên.
+
+### 🎙️ Khóa nhánh bằng giọng nói rảnh tay (Hands-Free Voice-Snap)
+- **Voice Snap-to-Branch**: Người dùng chỉ cần đọc từ đầu tiên của nhánh đã chọn, hệ thống tự động khóa nhánh đó và ẩn 2 nhánh còn lại trong **dưới 100 miligiây** (với dung sai âm vị 70%–80% hỗ trợ cả người phát âm chưa chuẩn bản xứ hoặc nuốt âm đuôi).
+- **Phím tắt dự phòng**: Trang bị phím số `1`, `2`, `3` để chọn nhánh tức thì khi môi trường văn phòng có tạp âm lớn.
+
+### 💬 Phụ đề đối phương thời gian thực & Chống quá tải thị giác
+- Tích hợp công cụ theo dõi DOM trích xuất phụ đề trực tiếp của Google Meet với độ trễ **dưới 20 miligiây**, hiển thị văn bản câu hỏi của đối phương ngay trên thanh bên giúp người dùng vừa nghe vừa đọc hiểu trọn vẹn nội dung.
+- **Cognitive Guardrail**: Tuyệt đối giữ trống vùng gợi ý khi đối phương đang nói, chỉ kích hoạt khi người dùng bắt đầu mở lời để tránh gây mất tập trung.
+
+### 🔄 Tự động làm mờ & Đồng bộ lại ngữ cảnh (Dynamic Re-anchoring)
+- Khi người dùng nảy ra ý riêng và nói từ ngữ nằm ngoài 3 phương án gợi ý, giao diện tự động giảm độ đậm trong **dưới 50 miligiây** để không làm phân tâm nhịp nói.
+- Ở lần ngắt giọng tiếp theo, hệ thống lấy chính từ vừa phát âm làm mốc ngữ cảnh mới để dựng ngay 3 nhánh đón đầu mới.
+
+### 🕊️ Tôn trọng nhịp nói tự nhiên (Silent When Fluent)
+- Khi người dùng đang phát biểu trôi chảy (các khoảng nghỉ giữa các từ dưới 200 miligiây), hệ thống hoàn toàn giữ im lặng, không cuộn chữ ép đọc và không hiển thị bất kỳ cảnh báo lỗi phát âm hay ngữ pháp nào.
+
+### 📄 Nạp tài liệu & Định hướng ngữ cảnh cuộc họp (Context Grounding)
+- Hỗ trợ nạp tệp tài liệu ghi chú (`.txt`, `.md`) hoặc dán văn bản chuẩn bị trước cuộc họp.
+- Tự động trích xuất danh mục thuật ngữ trọng tâm nạp vào bộ nhớ để áp dụng bộ lọc xác suất (Trie-guided logit bias), định hướng mô hình ưu tiên gợi ý đúng chủ đề cuộc trao đổi.
+
+---
+
+## 🏛️ 3. Kiến trúc Kỹ thuật 100% Ngoại tuyến (Local Offline Architecture)
+
+Fluencieer đặt cược vào kiến trúc **suy luận hoàn toàn trên thiết bị (On-Device Local Inference)** nhằm đáp ứng tiêu chuẩn khắt khe nhất về độ trễ thời gian thực và bảo mật thông tin cuộc họp doanh nghiệp:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                            FLUENCIEER FLOW                                  │
-├─────────────────────┬───────────────────────────┬───────────────────────────┤
-│ 1. PRE-MEETING      │ 2. IN-CALL REALTIME       │ 3. POST-MEETING           │
-│ Nạp bối cảnh .docx  │ Prefix-Aligned Forking    │ Báo cáo đo lường ngắc ngứ │
-│ Trích xuất glossary │ Bắt nhịp VAD ~200ms       │ Tự động sinh flashcard    │
-│ Prefill KV Cache    │ Khóa nhánh Hands-free     │ Luyện phản xạ từ vựng     │
-└─────────────────────┴───────────────────────────┴───────────────────────────┘
+│                       FLUENCIEER LOCAL PIPELINE                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+  [Meet Live Captions] ──(DOM Observer < 20ms)──┐
+                                                │
+  [Microphone Audio]   ──(Local VAD ~200ms)─────┼──► [Shared Context Buffer]
+                                                │          (RAM < 1.5 GB)
+  [Tài liệu cuộc họp]  ──(Trie Bias Table)──────┘                 │
+                                                                  ▼
+                                                   ┌─────────────────────────┐
+                                                   │ Qwen2.5 1.5B/1.7B 4-bit │
+                                                   │   Single-Pass Softmax   │
+                                                   └────────────┬────────────┘
+                                                                ▼
+                                                   Prefix-Aligned 3 Branches
+                                                   (< 50ms display latency)
 ```
+
+### Thông số Kỹ thuật & Ngân sách Độ trễ (Latency Budget)
+| Thành phần / Mắt xích | Cơ chế kỹ thuật | Ngưỡng chỉ tiêu SLA |
+| :--- | :--- | :--- |
+| **Phụ đề đối phương** | DOM MutationObserver đọc Google Meet CC | `< 20 miligiây` |
+| **Thu nhận âm thanh** | Web Audio API / VAD phát hiện khoảng ngắt giọng | `200 miligiây` |
+| **Mô hình ngôn ngữ** | Qwen2.5 1.5B / 1.7B lượng tử hóa 4-bit (chạy nền cục bộ) | TTFT `20–40ms` (GPU) / `80–120ms` (CPU) |
+| **Sinh nhánh gợi ý** | Trích xuất Top-K logits trực tiếp từ lớp phân phối softmax | `< 50 miligiây` |
+| **Khóa nhánh giọng nói** | Khớp từ đầu nhánh với dung sai âm vị 70%–80% | `< 100 miligiây` |
+| **Làm mờ khi nói lệch** | CSS opacity transition tự động ngắt hiển thị | `< 50 miligiây` |
+| **Tổng trễ phản hồi** | Tính từ khi kết thúc khoảng ngắt giọng đến khi hiện chữ | `< 150 miligiây` (GPU) |
+| **Trần bộ nhớ (RAM)** | Quản lý bộ đệm dùng chung (Shared KV-Cache prefix pinning) | `1.2 GB – 1.5 GB` |
+| **Bảo mật & Riêng tư** | 100% Offline — xóa sạch bộ đệm ngữ cảnh khi đóng phiên | **Đúng 0 request ra Internet** |
 
 ---
 
-## ✨ 2. Tính năng đột phá (Core Features)
+## 🖥️ 4. Thiết kế Giao diện Thanh bên (Side Panel Wireframe)
 
-### 🌿 Cây phân nhánh thẳng cột tiền tố (Prefix-Aligned Forking Tree)
-- Giữ trọn vẹn ngữ cảnh của câu đang nói ở dòng `[1]`, các dòng `[2]` và `[3]` được tự động thụt lề căn thẳng cột.
-- Triệt tiêu 100% rác mắt, không lặp lại từ đã nói, giúp người dùng phóng tầm mắt đọc trơn một hơi mượt mà:
-  ```text
-  [1] We need to  ▸ optimize system architecture ▸ to minimize latency down to 50ms.
-  [2]             ▸ review the deployment plan   ▸ with our backend engineering team.
-  [3]             ▸ verify compliance with SLA   ▸ before scheduled production release.
-  ```
-
-### ⏱️ Đón đầu cuốn chiếu (Rolling Chunks & Anti-Hesitation)
-- Thay vì bung cả đoạn văn bản dài gây ngợp mắt (Cognitive Overload), hệ thống chỉ phóng chiếu từng cụm 2–4 từ có nghĩa ngữ pháp hoàn chỉnh đón đầu nhịp thở.
-- Khi người dùng dừng lại ~200ms, 3 ngã rẽ Top-K ngữ cảnh xuất hiện ngay tức thì (< 50ms) giúp duy trì dòng chảy lưu loát (Fluency-First).
-
-### 🖥️ Trải nghiệm Zero Alt+Tab (In-Call Native HUD)
-- Giao diện Side Panel / HUD nổi được tích hợp trực tiếp, đặt sát cạnh webcam giúp người nói duy trì eye-contact tự nhiên với đối tác.
-- Loại bỏ hoàn toàn thói quen nguy hiểm: vừa họp vừa cuống cuồng bấm `Alt + Tab` tra từ trên Google Translate.
-
-### 🎙️ Điều khiển rảnh tay & Acoustic Gating
-- **Voice Snap-to-Branch**: Tự động nhận diện và khóa nhánh kịch bản ngay khi cất giọng đọc từ đầu tiên của nhánh đó.
-- **Phím tắt phản xạ**: Hỗ trợ phím số `1`, `2`, `3` và phím `Space` (ngắt nhịp thủ công tức thì khi môi trường có tạp âm).
-- **Acoustic Gating (Silent Ingestion)**: Thanh nhắc chữ hoàn toàn im lặng khi đối tác phát biểu; chỉ kích hoạt khi người dùng chuẩn bị mở lời.
-
-### 📄 Nạp ngữ cảnh tài liệu dự án (Context Grounding)
-- Kéo thả tệp tài liệu kỹ thuật (`.docx`) trước giờ họp để trích xuất thuật ngữ chuyên ngành trong < 2 giây.
-- Tự động nạp vào bộ đệm ngữ cảnh (KV Cache Prefill), đảm bảo câu gợi ý luôn bám sát thông số kiến trúc và cam kết SLA thực tế của dự án.
-
----
-
-## 🏛️ 3. Kiến trúc kỹ thuật (System Architecture)
-
-```
-┌───────────────────────────────────────────────────────────────┐
-│                      FLUENCIEER PIPELINE                      │
-└───────────────────────────────────────────────────────────────┘
-   [Microphone] ──► Web Speech API (Client STT) ─┐
-                                                 │
-   [Meet CC] ────► DOM Mutation Observer ────────┼──► WebSocket (0x02 User / 0x01 Partner)
-                                                 │       │
-   [Tài liệu] ───► Docx Parser / Term Extractor ─┘       ▼
-                                                  FastAPI Backend
-                                                         │
-                                  ┌──────────────────────┴──────────────────────┐
-                                  ▼                                             ▼
-                        Lookahead Cache (<0.5ms)                      Groq LLM Engine (<200ms)
-                                  │                                  (llama-3.3-70b-versatile)
-                                  └──────────────────────┬──────────────────────┘
-                                                         ▼
-                                            Prefix-Aligned Tree Output
-```
-
-- **Client:** Chrome Extension Manifest V3, Web Speech API, Web Audio API AnalyserNode.
-- **Backend:** FastAPI (Python 3.11+), WebSockets song công, Pydantic v2.
-- **AI Inference Engine:** Groq API (`llama-3.3-70b-versatile`), Grammar-Aware Fallback Engine.
-- **Target SLA:** Lookahead Cache < 10ms, P99 Latency < 500ms.
-
----
-
-## 📁 4. Cấu trúc thư mục (Repository Layout)
+Giao diện Fluencieer được thiết kế dưới dạng **Chrome Extension Side Panel** cố định cạnh cửa sổ Google Meet, chia đôi màn hình hợp lý giúp người nói duy trì hướng mắt nhìn gần camera:
 
 ```text
-Fluencieer/
-├── backend/                       # FastAPI & WebSocket Backend Service
-│   ├── app/
-│   │   ├── config.py              # Cấu hình Pydantic & Biến môi trường Groq
-│   │   ├── main.py                # FastAPI endpoints & WebSocket router
-│   │   └── services/              # ASR, Chunk Predictor, Lookahead Cache, Docx Parser
-│   ├── tests/                     # Backend Unit Tests
-│   └── pyproject.toml             # Quản lý dependencies với uv
-│
-├── extension/                     # Chrome Extension (Manifest V3)
-│   ├── manifest.json              # Khai báo Chrome Side Panel & Quyền
-│   └── sidepanel/                 # Giao diện Cột Bên Cạnh (Side Panel)
-│       ├── sidepanel.html         # Bố cục giao diện gọn gàng, trực quan
-│       ├── sidepanel.css          # Dark Mode UI & Hiệu ứng phát sáng
-│       ├── sidepanel.js           # Xử lý Web Speech, VAD, Voice Snap & WebSocket
-│       └── permission.*           # Trang xin cấp quyền Microphone chuẩn CSP
-│
-├── tests/                         # Kịch bản kiểm thử tích hợp E2E
-│   └── e2e/
-│       ├── test_10step_trace.py   # Benchmark chuỗi 10 bước phát âm chuẩn
-│       └── test_data/             # Tệp Word mẫu (.docx) phục vụ kiểm thử
-│
-├── docs/                          # Tài liệu kỹ thuật & Hướng dẫn triển khai
-├── AGENTS.md                      # Quy tắc thực thi chuẩn mực cho Agents
-└── README.md                      # Tài liệu tổng quan dự án
++-----------------------------------------------------------------+-----------------------------------+
+|  GOOGLE MEET - Project Sync (meet.google.com/...)               |  FLUENCIEER SIDE PANEL (360px)    |
++-----------------------------------------------------------------+-----------------------------------+
+|                                                                 | [A] Header & Trạng thái           |
+|                  +-------------------------------+              |  ● Ngoại tuyến 100% | Local 4-bit |
+|                  |                               |              |  RAM: 1.3 GB  | Mic: Bật (VAD)    |
+|                  |     [ Video Đối Phương ]      |              +-----------------------------------+
+|                  |                               |              | [B] Tài liệu & Từ vựng cuộc họp   |
+|                  |    (Không bị thanh bên che,   |              |  📄 project-notes.md (Đã nạp)     |
+|                  |    giữ mắt hướng về camera)   |              |  • Từ ưu tiên: scope, bottleneck  |
+|                  +-------------------------------+              +-----------------------------------+
+|                                                                 | [C] Phụ đề Đối phương (< 20ms)    |
+|  [CC] Đối phương:                                               |  Sarah:                           |
+|  "Could you share where we are with the backend timeline        |  "Could you share where we are    |
+|   and whether any risks might affect next week's milestone?"    |   with the backend timeline...?"  |
+|                                                                 +-----------------------------------+
+|                                                                 | [D] Cây Gợi Ý Tiền Tố (< 50ms)    |
+|                                                                 |  [1] We need to ▸ clarify the...  |
+|                                                                 |  [2]            ▸ update the...   |
+|                                                                 |  [3]            ▸ resolve the...  |
++-----------------------------------------------------------------+-----------------------------------+
+|       [ Mic ]   [ Cam ]   [ CC: Bật ]   [ Rời cuộc họp ]        | [E] Đọc từ đầu nhánh | Phím 1 2 3 |
++-----------------------------------------------------------------+-----------------------------------+
 ```
+
+> 💡 **Khám phá chi tiết Wireframe:**
+> - Đặc tả trạng thái 7 giai đoạn: WIREFRAME.md
+> - Bản mẫu HTML tương tác trực quan: wireframe.html
 
 ---
 
-## 🚀 5. Khởi chạy nhanh (Quick Start)
+## 📄 5. Bản quyền & Giấy phép (License)
 
-### Yêu cầu hệ thống
-- Python 3.11+ & công cụ quản lý gói [uv](https://github.com/astral-sh/uv)
-- Google Chrome (phiên bản hỗ trợ Chrome Side Panel API)
-
-### Bước 1: Khởi động Backend
-```bash
-# 1. Di chuyển vào thư mục backend
-cd backend
-
-# 2. Cài đặt dependencies
-uv sync
-
-# 3. Tạo file cấu hình môi trường (.env)
-echo "GROQ_API_KEY=your_groq_api_key_here" > .env
-echo "GROQ_MODEL=llama-3.3-70b-versatile" >> .env
-
-# 4. Chạy server phát triển
-uv run uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-```
-
-### Bước 2: Cài đặt Chrome Extension
-1. Mở Google Chrome và truy cập địa chỉ `chrome://extensions/`.
-2. Bật chế độ **Developer mode** ở góc trên bên phải.
-3. Bấm **Load unpacked** (Tải tiện ích đã giải nén) và chọn thư mục `extension/` của dự án.
-4. Mở Side Panel trên trình duyệt, bấm **"Bật Mic nhận diện"** và bắt đầu trải nghiệm.
-
----
-
-## 🧪 6. Kiểm thử tự động (Testing)
-
-> *Toàn bộ test suite được thiết kế để kiểm tra độc lập và xác thực nghiêm ngặt độ trễ:*
-
-```bash
-cd backend
-
-# Chạy Unit Tests
-uv run pytest -v
-
-# Chạy E2E Benchmark 10 bước phát âm & Kiểm tra SLA
-uv run pytest ../tests/e2e/test_10step_trace.py -v -s
-```
-
----
-
-## 📄 7. Bản quyền & Giấy phép (License)
-
-Dự án được phân phối dưới giấy phép [MIT License](LICENSE). Mọi đóng góp và cải tiến đều được hoan nghênh!
+Dự án được bảo hộ và phân phối nội bộ. Mọi quyền sở hữu trí tuệ thuộc về nhóm phát triển Fluencieer.
