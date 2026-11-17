@@ -1,0 +1,25 @@
+id,category,wav_file,expected_text,target_keyword,notes
+A01,prefix_200ms,A01_we_need_to.wav,We need to,,Pause 200ms after prefix to trigger 3 branches (UJ-1)
+A02,prefix_200ms,A02_regarding_timeline.wav,Regarding the timeline,,Open-office noisy turn start (UJ-2)
+A03,prefix_200ms,A03_if_we_decouple.wav,If we decouple,,Technical solution discussion prefix (UJ-3)
+A04,prefix_200ms,A04_from_technical.wav,From a technical perspective,,Formal status update prefix
+A05,prefix_200ms,A05_let_us_prioritize.wav,Let us prioritize,,Action planning prefix
+A06,prefix_200ms,A06_main_bottleneck.wav,The main bottleneck is,,Problem statement prefix
+B01,voice_lock_keyword,B01_resolve.wav,resolve,resolve,Test /z/ and /v/ final consonant drop in VN accent
+B02,voice_lock_keyword,B02_clarify.wav,clarify,clarify,Test unstressed middle syllable
+B03,voice_lock_keyword,B03_update.wav,update,update,Test final /t/ drop
+B04,voice_lock_keyword,B04_mitigate.wav,mitigate,mitigate,Test /t/ flapping or final /t/ drop
+B05,voice_lock_keyword,B05_prioritize.wav,prioritize,prioritize,Test multi-syllable stress shift
+B06,voice_lock_keyword,B06_schedule.wav,schedule,schedule,Test /sk/ vs /ʃ/ pronunciation variation
+B07,voice_lock_keyword,B07_bottleneck.wav,bottleneck,bottleneck,Test compound noun boundary
+B08,voice_lock_keyword,B08_stakeholders.wav,stakeholders,stakeholders,Test /st/ cluster and plural /z/ drop
+C01,offscript_phrase,C01_payment_queue.wav,the payment queue,payment,Off-script architecture pivot (UJ-3)
+C02,offscript_phrase,C02_deploy_hotfix.wav,deploy a hotfix tonight,deploy,Short spontaneous technical phrase
+C03,offscript_phrase,C03_review_arch.wav,review the architecture,review,Meeting action phrase
+C04,offscript_phrase,C04_sync_backend.wav,sync with backend team,sync,Common daily standup phrase
+C05,offscript_phrase,C05_reduce_memory.wav,reduce memory footprint,reduce,Technical discussion phrase
+D01,domain_vocab,D01_latency_threshold.wav,latency threshold,latency,Pinned meeting vocabulary term
+D02,domain_vocab,D02_sliding_window.wav,sliding window,sliding,Pinned meeting vocabulary term
+D03,domain_vocab,D03_prefix_pinning.wav,prefix pinning,prefix,Pinned meeting vocabulary term
+D04,domain_vocab,D04_rollback_strategy.wav,rollback strategy,rollback,Pinned meeting vocabulary term
+D05,domain_vocab,D05_acceptance_criteria.wav,acceptance criteria,acceptance,Pinned meeting vocabulary term

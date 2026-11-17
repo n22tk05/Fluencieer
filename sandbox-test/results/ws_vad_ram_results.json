@@ -1,0 +1,36 @@
+{
+  "ws_uri": "ws://127.0.0.1:8765",
+  "cases": [
+    {
+      "case": "Case 1: ws://localhost IPC RTT",
+      "target": "p95 <= 10.0 ms",
+      "observed": "p50=0.18 ms, p95=0.22 ms",
+      "passed": true
+    },
+    {
+      "case": "Case 2: Hot trigger 200ms (FR-3/FR-7)",
+      "target": "Trigger at 200ms; 0 slide runs in hot phase",
+      "observed": "event=hot_trigger_200ms, slide_runs=0",
+      "passed": true
+    },
+    {
+      "case": "Case 3: Fluent speech <200ms micro-pauses (SM-C1)",
+      "target": "0 false triggers",
+      "observed": "false_triggers=0",
+      "passed": true
+    },
+    {
+      "case": "Case 4: Pinned Prefix + Sliding Window <= 100 MB (FR-9)",
+      "target": "history_mb <= 100.0 MB & pinned_vocab=4",
+      "observed": "history_mb=90.0 MB, evicted=3, pinned=4",
+      "passed": true
+    },
+    {
+      "case": "Case 5: Process RSS <= 1.6 GB & Cleanup < 1s (FR-14/FR-15)",
+      "target": "RSS <= 1638.4 MB & clear < 1000 ms",
+      "observed": "rss_start=37.6 MB, rss_peak=42.8 MB, clear=7.72 ms",
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

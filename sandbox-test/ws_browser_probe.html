@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fluencieer Sandbox — Chrome Web Audio API + ws://localhost Probe</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 32px auto; padding: 0 16px; color: #0f172a; }
+    .card { border: 1px solid #cbd5e1; border-radius: 10px; padding: 16px; margin-bottom: 16px; background: #f8fafc; }
+    button { padding: 8px 14px; border-radius: 6px; border: 1px solid #2563eb; background: #2563eb; color: #fff; cursor: pointer; font-weight: 600; margin-right: 8px; }
+    button.stop { background: #dc2626; border-color: #dc2626; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 12px; border-radius: 8px; min-height: 220px; overflow-y: auto; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h2>Fluencieer — Web Audio API &rarr; ws://127.0.0.1:8765 Probe</h2>
+  <div class="card">
+    <p>1. Chạy lệnh: <code>python test_2_ws_audio_ram.py --mode server</code></p>
+    <p>2. Bấm <strong>Bắt đầu Mic</strong> để đo RTT <code>ws://localhost</code> và thử dừng 200ms vs 1,5–2 giây.</p>
+    <button id="startBtn">Bắt đầu Mic</button>
+    <button id="pingBtn">Đo RTT (20 lần)</button>
+    <button id="stopBtn" class="stop">Dừng &amp; Xóa phiên</button>
+  </div>
+  <pre id="log"></pre>
+
+  <script>
+    const logEl = document.getElementById("log");
+    const log = (msg) => {
+      logEl.textContent += `[${new Date().toLocaleTimeString()}] ${msg}\n`;
+      logEl.scrollTop = logEl.scrollHeight;
+    };
+
+    let ws = null;
+    let audioCtx = null;
+    let mediaStream = null;
+    let processor = null;
+    let pcmBuffer = [];
+
+    function downsampleTo16kInt16(float32, inRate) {
+      const ratio = inRate / 16000;
+      const outLen = Math.floor(float32.length / ratio);
+      const out = new Int16Array(outLen);
+      for (let i = 0; i < outLen; i++) {
+        const idx = Math.floor(i * ratio);
+        const s = Math.max(-1, Math.min(1, float32[idx]));
+        out[i] = s < 0 ? s * 32768 : s * 32767;
+      }
+      return out;
+    }
+
+    document.getElementById("startBtn").onclick = async () => {
+      ws = new WebSocket("ws://127.0.0.1:8765");
+      ws.onopen = async () => {
+        log("Connected ws://127.0.0.1:8765");
+        mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        audioCtx = new AudioContext();
+        const source = audioCtx.createMediaStreamSource(mediaStream);
+        processor = audioCtx.createScriptProcessor(1024, 1, 1);
+        source.connect(processor);
+        processor.connect(audioCtx.destination);
+        processor.onaudioprocess = (e) => {
+          if (!ws || ws.readyState !== WebSocket.OPEN) return;
+          const int16 = downsampleTo16kInt16(e.inputBuffer.getChannelData(0), audioCtx.sampleRate);
+          for (let i = 0; i < int16.length; i++) pcmBuffer.push(int16[i]);
+          while (pcmBuffer.length >= 320) {
+            const frame = new Int16Array(pcmBuffer.splice(0, 320));
+            ws.send(frame.buffer);
+          }
+        };
+        log("Web Audio API streaming 20ms @ 16kHz PCM frames...");
+      };
+      ws.onmessage = (ev) => log(`Server -> ${ev.data}`);
+      ws.onerror = (err) => log(`WS Error: ${err.type}`);
+    };
+
+    document.getElementById("pingBtn").onclick = () => {
+      if (!ws || ws.readyState !== WebSocket.OPEN) return log("Chưa kết nối WebSocket.");
+      let count = 0;
+      const rtts = [];
+      const origHandler = ws.onmessage;
+      ws.onmessage = (ev) => {
+        const msg = JSON.parse(ev.data);
+        if (msg.type === "pong") {
+          rtts.push(performance.now() - msg.client_ts);
+          count++;
+          if (count < 20) {
+            ws.send(JSON.stringify({ type: "ping", client_ts: performance.now() }));
+          } else {
+            ws.onmessage = origHandler;
+            const max = Math.max(...rtts).toFixed(2);
+            const avg = (rtts.reduce((a, b) => a + b, 0) / rtts.length).toFixed(2);
+            log(`IPC RTT (20 samples): avg=${avg} ms, max=${max} ms (target ~10 ms)`);
+          }
+        }
+      };
+      ws.send(JSON.stringify({ type: "ping", client_ts: performance.now() }));
+    };
+
+    document.getElementById("stopBtn").onclick = () => {
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: "close_session" }));
+      }
+      if (processor) processor.disconnect();
+      if (mediaStream) mediaStream.getTracks().forEach((t) => t.stop());
+      if (audioCtx) audioCtx.close();
+      log("Stopped mic capture.");
+    };
+  </script>
+</body>
+</html>
