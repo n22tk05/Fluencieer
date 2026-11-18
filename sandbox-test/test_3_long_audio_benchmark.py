@@ -99,6 +99,44 @@ def build_long_samples() -> list[LongSample]:
             ),
             source_type="TTS en-US (Zira)",
         ),
+        LongSample(
+            sample_id="L05_20s",
+            wav_path=LONG_DIR / "L05_20s.wav",
+            expected_text=(
+                "Good morning, respected instructor and fellow classmates. "
+                "My name is Nguyễn Tuấn Khánh. "
+                "On behalf of our group, I am honored to welcome everyone to our technical presentation on ARP Poisoning, "
+                "MITM Architecture, and Cisco Enterprise Defense"
+            ),
+            source_type="TTS en-US (Khánh)",
+
+        ),
+        LongSample(
+            sample_id="L06_76s",
+            wav_path=LONG_DIR / "L06_76s.wav",
+            expected_text=(
+                "To understand how an attack succeeds, we must first look at how ARP "
+                "operates under normal circumstances. In an Ethernet network, when "
+                "Host A wants to communicate with Gateway R1, it knows the gateway's "
+                "IP address, but it cannot package a Layer 2 frame without the "
+                "destination MAC address. Therefore, Host A broadcasts an ARP Request "
+                "across the entire broadcast domain asking: 'Who has 192.168.10.1? "
+                "Tell my MAC address.' When Router R1 receives this, it unicasts an "
+                "ARP Reply containing its hardware address, and Host A caches this "
+                "mapping in its ARP table. However, please pay close attention to "
+                "the right side of this slide: the Gratuitous ARP mechanism"
+            ),
+            source_type="Human speech (Khánh, 48kHz->16kHz)",
+        ),
+        LongSample(
+            sample_id="L07_33s",
+            wav_path=LONG_DIR / "L07_33s.wav",
+            expected_text=(
+                "So now we talk about myself in few days. So I have plan on myself "
+                "in Sunday about journey on my day. But I forgot it and don't write it"
+            ),
+            source_type="Human speech (Khánh, 48kHz->16kHz)",
+        ),
     ]
 
 
@@ -188,9 +226,16 @@ def main() -> None:
         action="store_true",
         help="Also attempt faster-whisper tiny.en on CUDA FP16 if CUDA libs are available",
     )
+    parser.add_argument(
+        "--sample",
+        default=None,
+        help="Optional sample_id filter (e.g. L06_76s)",
+    )
     args = parser.parse_args()
 
     samples = build_long_samples()
+    if args.sample:
+        samples = [s for s in samples if s.sample_id == args.sample]
     runners: list[Any] = [
         MoonshineRunner("moonshine/tiny", precision="quantized"),
         MoonshineRunner("moonshine/tiny", precision="float"),

@@ -199,18 +199,27 @@ class MoonshineRunner:
 
 
 class WhisperRunner:
-    """Runner for faster-whisper tiny.en on CPU INT8 or CUDA FP16."""
+    """Runner for faster-whisper models on CPU INT8 or CUDA FP16 with optional hotwords."""
 
     def __init__(
         self,
         model_size: str = "tiny.en",
         device: str = "cpu",
         compute_type: str = "int8",
+        hotwords: str | None = None,
+        initial_prompt: str | None = None,
+        beam_size: int = 1,
+        vad_filter: bool = False,
     ) -> None:
         self.model_size = model_size
         self.device = device
         self.compute_type = compute_type
-        self.name = f"faster-whisper/{model_size} ({device}/{compute_type})"
+        self.hotwords = hotwords
+        self.initial_prompt = initial_prompt
+        self.beam_size = beam_size
+        self.vad_filter = vad_filter
+        hw_tag = "+hotwords" if (hotwords or initial_prompt) else ""
+        self.name = f"faster-whisper/{model_size}{hw_tag} ({device}/{compute_type})"
         self._model: Any = None
 
     def load(self) -> None:
@@ -222,16 +231,18 @@ class WhisperRunner:
             compute_type=self.compute_type,
         )
         warmup = np.zeros(SAMPLE_RATE, dtype=np.float32)
-        segments, _ = self._model.transcribe(warmup, language="en", beam_size=1)
+        segments, _ = self._model.transcribe(warmup, language="en", beam_size=self.beam_size)
         list(segments)
 
     def transcribe(self, audio: np.ndarray, wav_path: Path | None = None) -> str:
         segments, _ = self._model.transcribe(
             audio.astype(np.float32),
             language="en",
-            beam_size=1,
-            vad_filter=False,
+            beam_size=self.beam_size,
+            vad_filter=self.vad_filter,
             condition_on_previous_text=False,
+            initial_prompt=self.initial_prompt,
+            hotwords=self.hotwords,
         )
         return " ".join(seg.text.strip() for seg in segments).strip()
 
@@ -276,13 +287,17 @@ def load_manifest(path: Path) -> list[SampleSpec]:
 
 
 def load_audio_mono_16k(wav_path: Path) -> np.ndarray:
+    """Load audio file, convert to mono, and downsample/resample to 16 kHz."""
+    from math import gcd
     import soundfile as sf
+    from scipy.signal import resample_poly
 
     data, sr = sf.read(wav_path, dtype="float32")
     if data.ndim > 1:
         data = np.mean(data, axis=1)
     if sr != SAMPLE_RATE:
-        raise ValueError(f"{wav_path.name}: expected {SAMPLE_RATE}Hz, got {sr}Hz")
+        factor = gcd(SAMPLE_RATE, sr)
+        data = resample_poly(data, SAMPLE_RATE // factor, sr // factor)
     return data.astype(np.float32)
 
 
@@ -426,7 +441,16 @@ def build_runners(args: argparse.Namespace) -> list[STTRunner]:
             runners.append(MoonshineRunner(model_name=name, precision=args.moonshine_precision))
         elif name.startswith("whisper/"):
             size = name.split("/", 1)[1]
-            runners.append(WhisperRunner(model_size=size, device=args.device, compute_type=args.compute_type))
+            runners.append(
+                WhisperRunner(
+                    model_size=size,
+                    device=args.device,
+                    compute_type=args.compute_type,
+                    hotwords=args.hotwords,
+                    initial_prompt=args.initial_prompt,
+                    beam_size=2 if (args.hotwords or args.initial_prompt) else 1,
+                )
+            )
         else:
             raise ValueError(f"Unsupported model spec '{name}'. Use 'moonshine/tiny', 'moonshine/base', or 'whisper/tiny.en'.")
     return runners
@@ -448,6 +472,8 @@ def main() -> None:
     )
     parser.add_argument("--device", default="cpu", choices=["cpu", "cuda"], help="Device for faster-whisper")
     parser.add_argument("--compute-type", default="int8", help="CTranslate2 compute_type for faster-whisper")
+    parser.add_argument("--hotwords", default=None, help="Comma-separated meeting vocabulary hotwords for Whisper")
+    parser.add_argument("--initial-prompt", default=None, help="Initial vocabulary prompt for Whisper")
     parser.add_argument("--dry-run", action="store_true", help="Validate scoring & reporting without audio/models")
     args = parser.parse_args()
 

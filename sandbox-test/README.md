@@ -14,6 +14,7 @@ Thư mục này chứa bộ kịch bản kiểm thử độc lập phục vụ *
 - `test_1_stt_benchmark.py` — Script benchmark A/B cho `Moonshine` vs `Faster-Whisper tiny.en`.
 - `test_2_ws_audio_ram.py` — Script kiểm chứng `ws://localhost` IPC, VAD 2 nhịp, Sliding Window và trần RAM.
 - `test_3_long_audio_benchmark.py` — Script test đoạn dài (6s–42s) đo độ trễ theo thời lượng, RTF, RAM tăng vọt của ONNX arena và WER.
+- `test_4_hotword_benchmark.py` — Script test đối chứng `hotwords` / `initial_prompt` (Whisper) và chunk 4.5s + vocab snapping (Moonshine) trên giọng Việt (`L05_20s.wav`).
 - `ws_browser_probe.html` — Trang kiểm tra `Web Audio API` thu micro thật từ Chrome bắn qua `ws://127.0.0.1:8765`.
 - `results/` — Thư mục tự sinh khi chạy test, lưu báo cáo `.md` và `.json`.
 

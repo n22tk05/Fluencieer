@@ -4,7 +4,7 @@
     {
       "case": "Case 1: ws://localhost IPC RTT",
       "target": "p95 <= 10.0 ms",
-      "observed": "p50=0.18 ms, p95=0.22 ms",
+      "observed": "p50=0.17 ms, p95=0.22 ms",
       "passed": true
     },
     {
@@ -28,7 +28,7 @@
     {
       "case": "Case 5: Process RSS <= 1.6 GB & Cleanup < 1s (FR-14/FR-15)",
       "target": "RSS <= 1638.4 MB & clear < 1000 ms",
-      "observed": "rss_start=37.6 MB, rss_peak=42.8 MB, clear=7.72 ms",
+      "observed": "rss_start=37.3 MB, rss_peak=41.9 MB, clear=6.08 ms",
       "passed": true
     }
   ],
