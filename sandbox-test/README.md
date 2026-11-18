@@ -13,6 +13,7 @@ Thư mục này chứa bộ kịch bản kiểm thử độc lập phục vụ *
 - `audio_samples/manifest.csv` — 24 kịch bản câu nói tiếng Anh ngắn 1–3 giây chia 4 nhóm (`prefix_200ms`, `voice_lock_keyword`, `offscript_phrase`, `domain_vocab`).
 - `test_1_stt_benchmark.py` — Script benchmark A/B cho `Moonshine` vs `Faster-Whisper tiny.en`.
 - `test_2_ws_audio_ram.py` — Script kiểm chứng `ws://localhost` IPC, VAD 2 nhịp, Sliding Window và trần RAM.
+- `test_3_long_audio_benchmark.py` — Script test đoạn dài (6s–42s) đo độ trễ theo thời lượng, RTF, RAM tăng vọt của ONNX arena và WER.
 - `ws_browser_probe.html` — Trang kiểm tra `Web Audio API` thu micro thật từ Chrome bắn qua `ws://127.0.0.1:8765`.
 - `results/` — Thư mục tự sinh khi chạy test, lưu báo cáo `.md` và `.json`.
 
