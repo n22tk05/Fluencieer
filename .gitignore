@@ -29,3 +29,5 @@ __pycache__/
 Makefile
 *.md
 !README.md
+/sandbox-test/audio_samples
+.env
