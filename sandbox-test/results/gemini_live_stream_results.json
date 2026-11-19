@@ -1,0 +1,160 @@
+[
+  {
+    "sample_id": "L01_6s",
+    "duration_sec": 6.24,
+    "pace": 1.0,
+    "latency_ms": 7781.3,
+    "first_interim_ms": 1763.9,
+    "flush_ms": 416.4,
+    "turn_boundaries": 1,
+    "wer": 0.0,
+    "cer": 0.0,
+    "term_hit_rate": 1.0,
+    "matched_terms": [
+      "backend timeline",
+      "database bottleneck"
+    ],
+    "predicted_text": "Regarding the backend timeline, we need to resolve the current database bottleneck before Friday."
+  },
+  {
+    "sample_id": "H01_10s_human",
+    "duration_sec": 9.96,
+    "pace": 1.0,
+    "latency_ms": 11003.9,
+    "first_interim_ms": 1142.2,
+    "flush_ms": 78.3,
+    "turn_boundaries": 2,
+    "wer": 1.0,
+    "cer": 1.0308,
+    "term_hit_rate": 1.0,
+    "matched_terms": [
+      "ever tried",
+      "fail better"
+    ],
+    "predicted_text": "Ever tried. Ever failed. No matter. Try again. Fail better. Ever tried. Ever failed. No matter. Try again. Fail better. Fail again. Fail better."
+  },
+  {
+    "sample_id": "L02_11s",
+    "duration_sec": 11.09,
+    "pace": 1.0,
+    "latency_ms": 14637.2,
+    "first_interim_ms": 1366.5,
+    "flush_ms": 2477.1,
+    "turn_boundaries": 1,
+    "wer": 0.0,
+    "cer": 0.0,
+    "term_hit_rate": 1.0,
+    "matched_terms": [
+      "payment queue",
+      "latency spikes",
+      "deployment checklist",
+      "stakeholders"
+    ],
+    "predicted_text": "From a technical perspective, decoupling the payment queue reduces latency spikes during peak traffic.\n\nNext week we will review the deployment checklist with all stakeholders."
+  },
+  {
+    "sample_id": "L03_26s",
+    "duration_sec": 26.48,
+    "pace": 1.0,
+    "latency_ms": 28540.0,
+    "first_interim_ms": 1075.5,
+    "flush_ms": 525.2,
+    "turn_boundaries": 1,
+    "wer": 0.0,
+    "cer": 0.0,
+    "term_hit_rate": 1.0,
+    "matched_terms": [
+      "sliding window",
+      "WebRTC",
+      "rollback strategy",
+      "acceptance criteria"
+    ],
+    "predicted_text": "Let me share a quick update on our sprint progress. We finished profiling the local inference pipeline and verified that our sliding window keeps memory usage stable below the target threshold. However, we noticed minor latency fluctuations when multiple browser tabs run WebRTC calls simultaneously, so we are preparing a rollback strategy and finalizing the acceptance criteria before our release demo."
+  },
+  {
+    "sample_id": "L04_42s",
+    "duration_sec": 41.82,
+    "pace": 1.0,
+    "latency_ms": 44972.1,
+    "first_interim_ms": 1386.4,
+    "flush_ms": 666.0,
+    "turn_boundaries": 4,
+    "wer": 1.6222,
+    "cer": 1.4204,
+    "term_hit_rate": 1.0,
+    "matched_terms": [
+      "prefix pinning",
+      "domain terminology",
+      "speech recognition"
+    ],
+    "predicted_text": "Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. If the local speech recognition buffer grows unbounded over a 60-minute meeting, memory consumption can spike unexpectedly and degrade video call frame rates. Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. If the local speech recognition buffer grows unbounded over a 60-minute meeting, memory consumption can spike unexpectedly and degrade video call frame rates. Second, network-dependent speech recognition services introduce unpredictable delays above 500 milliseconds. Third, speakers often pause briefly mid-sentence while searching for precise domain terminology, so keeping prefix pinning active ensures the model prioritizes Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. If the local speech recognition buffer grows unbounded over a 60-minute meeting, memory consumption can spike unexpectedly and degrade video call frame rates. Second, network-dependent speech recognition services introduce unpredictable delays above 500 milliseconds. Third, speakers often pause briefly mid-sentence while searching for precise domain terminology, so keeping prefix pinning active ensures the model prioritizes vocabulary without duplicating context memory."
+  },
+  {
+    "sample_id": "L05_20s",
+    "duration_sec": 20.27,
+    "pace": 1.0,
+    "latency_ms": 22248.5,
+    "first_interim_ms": 3990.1,
+    "flush_ms": 510.5,
+    "turn_boundaries": 2,
+    "wer": 0.5,
+    "cer": 0.4872,
+    "term_hit_rate": 1.0,
+    "matched_terms": [
+      "respected instructor",
+      "fellow classmates",
+      "technical presentation",
+      "ARP Poisoning",
+      "MITM Architecture",
+      "Cisco Enterprise Defense"
+    ],
+    "predicted_text": "Good morning everyone, respected instructor and fellow classmates. My name is Nguyen Tuan Khanh. Good morning everyone, respected instructor and fellow classmates. My name is Nguyen Tuan Khanh. On behalf of our group, I would like to welcome everyone to our technical presentation on ARP Poisoning, MITM Architecture, and Cisco Enterprise Defense."
+  },
+  {
+    "sample_id": "L06_76s",
+    "duration_sec": 74.69,
+    "pace": 1.0,
+    "latency_ms": 80725.5,
+    "first_interim_ms": 4370.1,
+    "flush_ms": 2153.0,
+    "turn_boundaries": 2,
+    "wer": 1.0177,
+    "cer": 0.8128,
+    "term_hit_rate": 0.9231,
+    "matched_terms": [
+      "ARP",
+      "Ethernet network",
+      "Host A",
+      "Gateway R1",
+      "Layer 2",
+      "MAC address",
+      "ARP Request",
+      "broadcast domain",
+      "192.168.10.1",
+      "Router R1",
+      "ARP Reply",
+      "ARP table"
+    ],
+    "predicted_text": "To understand how ARP operates under normal circumstances in an Ethernet network, we must first look at how Host A communicates with Gateway R1. Host A knows the Gateway R1 IP address, but it cannot packet a Layer 2 frame without the destination MAC address.\n\nTherefore, Host A broadcasts an ARP Request across the entire broadcast domain asking, \"Who has 192.168.10.1? Tell me MAC address.\" When Router R1 receives this, it unicasts an ARP Reply containing its hardware address, and Host A caches this mapping in its ARP table. To understand how ARP operates under normal circumstances in an Ethernet network, we must first look at how Host A communicates with Gateway R1. Host A knows the Gateway R1 IP address, but it cannot packet a Layer 2 frame without the destination MAC address.\n\nTherefore, Host A broadcasts an ARP Request across the entire broadcast domain asking, \"Who has 192.168.10.1? Tell me MAC address.\" When Router R1 receives this, it unicasts an ARP Reply containing its hardware address, and Host A caches this mapping in its ARP table."
+  },
+  {
+    "sample_id": "L07_33s",
+    "duration_sec": 33.94,
+    "pace": 1.0,
+    "latency_ms": 37372.7,
+    "first_interim_ms": 2982.8,
+    "flush_ms": 1546.3,
+    "turn_boundaries": 4,
+    "wer": 2.4333,
+    "cer": 2.3985,
+    "term_hit_rate": 1.0,
+    "matched_terms": [
+      "myself",
+      "Sunday",
+      "journey",
+      "forgot",
+      "write"
+    ],
+    "predicted_text": "Okay, so now I will talk about myself in a few days. Okay, so now I will talk about myself in a few days. For myself, on Sunday, I will be writing some journey. Okay, so now I will talk about myself in a few days. For myself, on Sunday, I will be writing some journey. Apna idai. Okay, so now I will talk about myself in a few days. For myself, on Sunday, I will be writing some journey. Apna idai. I forgot it and I don't write anything and I don't talk about it."
+  }
+]

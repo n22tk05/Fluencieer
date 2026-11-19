@@ -1,0 +1,493 @@
+[
+  {
+    "engine": "sherpa-onnx/zipformer-en (int8, greedy, 200ms)",
+    "load_ms": 2533.7,
+    "rss_delta_mb": 303.2,
+    "peak_rss_mb": 382.9,
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "chunk_count": 32,
+        "chunk_p50_ms": 17.29,
+        "chunk_p95_ms": 23.44,
+        "chunk_max_ms": 38.16,
+        "flush_final_ms": 19.2,
+        "total_decode_ms": 403.0,
+        "rtf": 0.0646,
+        "wer": 0.1429,
+        "cer": 0.0105,
+        "term_hit_rate": 0.5,
+        "matched_terms": [
+          "database bottleneck"
+        ],
+        "predicted_text": "REGARDING THE BACK END TIMELINE WE NEED TO RESOLVE THE CURRENT DATABASE BOTTLENECK BEFORE FRIDAY"
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "chunk_count": 50,
+        "chunk_p50_ms": 16.99,
+        "chunk_p95_ms": 21.24,
+        "chunk_max_ms": 34.14,
+        "flush_final_ms": 36.11,
+        "total_decode_ms": 616.3,
+        "rtf": 0.0619,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "EVER TRIED EVER FAILED NO MATTER TRY AGAIN FAIL AGAIN FAIL BETTER"
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "chunk_count": 56,
+        "chunk_p50_ms": 16.48,
+        "chunk_p95_ms": 18.79,
+        "chunk_max_ms": 21.63,
+        "flush_final_ms": 17.18,
+        "total_decode_ms": 620.8,
+        "rtf": 0.056,
+        "wer": 0.04,
+        "cer": 0.0174,
+        "term_hit_rate": 0.75,
+        "matched_terms": [
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "FROM A TECHNICAL PERSPECTIVE DECOUPLING THE PAYMENT CUE REDUCES LATENCY SPIKES DURING PEAK TRAFFIC NEXT WEEK WE WILL REVIEW THE DEPLOYMENT CHECKLIST WITH ALL STAKEHOLDERS"
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "chunk_count": 133,
+        "chunk_p50_ms": 16.6,
+        "chunk_p95_ms": 18.38,
+        "chunk_max_ms": 21.83,
+        "flush_final_ms": 17.57,
+        "total_decode_ms": 1467.3,
+        "rtf": 0.0554,
+        "wer": 0.0328,
+        "cer": 0.0025,
+        "term_hit_rate": 0.75,
+        "matched_terms": [
+          "sliding window",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "LET ME SHARE A QUICK UPDATE ON OUR SPRINT PROGRESS WE FINISHED PROFILING THE LOCAL INFERENCE PIPELINE AND VERIFIED THAT OUR SLIDING WINDOW KEEPS MEMORY USAGE STABLE BELOW THE TARGET THRESHOLD HOWEVER WE NOTICED MINOR LATENCY FLUCTUATIONS WHEN MULTIPLE BROWSER TABS RUN WEB RTC CALLS SIMULTANEOUSLY SO WE ARE PREPARING A ROLLBACK STRATEGY AND FINALIZING THE ACCEPTANCE CRITERIA BEFORE OUR RELEASE DEMO"
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "chunk_count": 210,
+        "chunk_p50_ms": 17.32,
+        "chunk_p95_ms": 23.57,
+        "chunk_max_ms": 47.57,
+        "flush_final_ms": 17.19,
+        "total_decode_ms": 2661.5,
+        "rtf": 0.0636,
+        "wer": 0.0222,
+        "cer": 0.0015,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "BEFORE WE LOCK THE ARCHITECTURE FOR THE PROTOTYPE I WANT TO WALK THROUGH THREE CRITICAL RISKS WE DISCOVERED DURING TESTING FIRST IF THE LOCAL SPEECH RECOGNITION BUFFER GROWS UNBOUNDED OVER A SIXTY MINUTE MEETING MEMORY CONSUMPTION CAN SPIKE UNEXPECTEDLY AND DEGRADE VIDEO CALL FRAME RATES SECOND NETWORK DEPENDENT SPEECH SERVICES INTRODUCE UNPREDICTABLE DELAYS ABOVE FIVE HUNDRED MILLISECONDS BREAKING THE NATURAL CONVERSATIONAL RHYTHM THIRD SPEAKERS OFTEN PAUSE BRIEFLY MIDSENTENCE WHILE SEARCHING FOR PRECISE DOMAIN TERMINOLOGY SO KEEPING PREFIX PINNING ACTIVE ENSURES THE MODEL PRIORITIZES PROJECT VOCABULARY WITHOUT DUPLICATING CONTEXT MEMORY"
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "chunk_count": 102,
+        "chunk_p50_ms": 18.09,
+        "chunk_p95_ms": 27.03,
+        "chunk_max_ms": 55.25,
+        "flush_final_ms": 17.18,
+        "total_decode_ms": 1422.9,
+        "rtf": 0.0702,
+        "wer": 0.775,
+        "cer": 0.5256,
+        "term_hit_rate": 0.0,
+        "matched_terms": [],
+        "predicted_text": "US GOOD MONDAY EVERYONE RESPECT TO EACH LO FELLOW CLASSMATE MAY WIMUKAN ON BEHALF OF MY ROOM I OWN IT TO WELCOME EVERYONE TO ALTERN INCORPORATION ON AOBOSITING AND MAN IN THE WINDOW ARCHITECTURED FRAME"
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "chunk_count": 374,
+        "chunk_p50_ms": 17.69,
+        "chunk_p95_ms": 26.41,
+        "chunk_max_ms": 59.6,
+        "flush_final_ms": 23.34,
+        "total_decode_ms": 4920.3,
+        "rtf": 0.0659,
+        "wer": 0.6903,
+        "cer": 0.3775,
+        "term_hit_rate": 0.1538,
+        "matched_terms": [
+          "Host A",
+          "broadcast domain"
+        ],
+        "predicted_text": "TOURIST THEY HAVE A SUCCESSED WE MUST WE MUST FIRST LOOK AT HOW IR B ALREADY TAKEN UNDER THE NORMAL SITE CIRCUMSTAIN IN AN INTERNET NETWORK WANE HAS ONE TO COMMUNICATE WITH GAY OR ONE IS NO THE WAY ABI ADDRESS WELL THIS CANNOT BE A LAYER TWO FROM WITH TAO THE LATINIQUE THAT DETONATION MUST MY ASPIRATION THEREFORE HAS A BROADCAST AN IB REQUEST ACROSS THE ENTIRE BROADCAST DOMAIN SCHEME WHO HAS THAT IDEA TELL ME MY ADDRESS SO WHEN ROUTER R ONE IS RECEIVE THIS IS UNICAST AND I OR B REPLY CONTAINING IS THE HARDWARE ADDRESS AND HOST A CAT THIS MAPPING IN A R P TABLE HOWEVER PLAY PLAY HEY CLOTH INTENTION TO THE RIGHT STYE OF THIS LINE"
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "chunk_count": 170,
+        "chunk_p50_ms": 16.84,
+        "chunk_p95_ms": 22.96,
+        "chunk_max_ms": 46.4,
+        "flush_final_ms": 42.85,
+        "total_decode_ms": 2145.8,
+        "rtf": 0.0632,
+        "wer": 0.8333,
+        "cer": 0.6617,
+        "term_hit_rate": 0.6,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "write"
+        ],
+        "predicted_text": "OKAY SO NOW WE TALK ABOUT MY STYLE IN FIELD AH SO AIR BLANK FOR MYSELF IN SUNDAY BUT WE WRITING SOME JOHNNY UP NINE DAYS BUT I FORGET IT AND I DON'T WRITE ANYTHING AND YOU DON'T TALK ABOUT IT"
+      }
+    ]
+  },
+  {
+    "engine": "sherpa-onnx/zipformer-en (int8, beam+hotwords, 200ms)",
+    "load_ms": 2597.7,
+    "rss_delta_mb": 231.2,
+    "peak_rss_mb": 395.0,
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "chunk_count": 32,
+        "chunk_p50_ms": 18.43,
+        "chunk_p95_ms": 20.49,
+        "chunk_max_ms": 20.99,
+        "flush_final_ms": 19.72,
+        "total_decode_ms": 393.0,
+        "rtf": 0.063,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "REGARDING THE BACKEND TIMELINE WE NEED TO RESOLVE THE CURRENT DATABASE BOTTLENECK BEFORE FRIDAY"
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "chunk_count": 50,
+        "chunk_p50_ms": 18.07,
+        "chunk_p95_ms": 19.82,
+        "chunk_max_ms": 20.29,
+        "flush_final_ms": 36.7,
+        "total_decode_ms": 608.2,
+        "rtf": 0.061,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "EVER TRIED EVER FAILED NO MATTER TRY AGAIN FAIL AGAIN FAIL BETTER"
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "chunk_count": 56,
+        "chunk_p50_ms": 18.57,
+        "chunk_p95_ms": 20.75,
+        "chunk_max_ms": 21.36,
+        "flush_final_ms": 21.14,
+        "total_decode_ms": 698.1,
+        "rtf": 0.063,
+        "wer": 0.16,
+        "cer": 0.1279,
+        "term_hit_rate": 0.75,
+        "matched_terms": [
+          "payment queue",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "FROM A TECHNICAL PERSPECTIVE DECOUPLING THE PAYMENT QUEUE REDUCES LATENCY SPIK NEXT WEEK WE WILL REVIEW THE DEPLOYMENT CHECKLIST WITH ALL STAKEHOLDERS"
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "chunk_count": 133,
+        "chunk_p50_ms": 19.31,
+        "chunk_p95_ms": 21.16,
+        "chunk_max_ms": 32.79,
+        "flush_final_ms": 20.12,
+        "total_decode_ms": 1709.0,
+        "rtf": 0.0646,
+        "wer": 0.0164,
+        "cer": 0.005,
+        "term_hit_rate": 0.75,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy"
+        ],
+        "predicted_text": "LET ME SHARE A QUICK UPDATE ON OUR SPRINT PROGRESS WE FINISHED PROFILING THE LOCAL INFERENCE PIPELINE AND VERIFIED THAT OUR SLIDING WINDOW KEEPS MEMORY USAGE STABLE BELOW THE TARGET THRESHOLD HOWEVER WE NOTICED MINOR LATENCY FLUCTUATIONS WHEN MULTIPLE BROWSER TABS RUN WEBRTC CALLS SIMULTANEOUSLY SO WE ARE PREPARING A ROLLBACK STRATEGY AND FINALIZING THE ACCEPTANCE CRITIA BEFORE OUR RELEASE DEMO"
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "chunk_count": 210,
+        "chunk_p50_ms": 19.69,
+        "chunk_p95_ms": 35.94,
+        "chunk_max_ms": 75.75,
+        "flush_final_ms": 23.83,
+        "total_decode_ms": 3257.0,
+        "rtf": 0.0779,
+        "wer": 0.0222,
+        "cer": 0.0015,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "BEFORE WE LOCK THE ARCHITECTURE FOR THE PROTOTYPE I WANT TO WALK THROUGH THREE CRITICAL RISKS WE DISCOVERED DURING TESTING FIRST IF THE LOCAL SPEECH RECOGNITION BUFFER GROWS UNBOUNDED OVER A SIXTY MINUTE MEETING MEMORY CONSUMPTION CAN SPIKE UNEXPECTEDLY AND DEGRADE VIDEO CALL FRAME RATES SECOND NETWORK DEPENDENT SPEECH SERVICES INTRODUCE UNPREDICTABLE DELAYS ABOVE FIVE HUNDRED MILLISECONDS BREAKING THE NATURAL CONVERSATIONAL RHYTHM THIRD SPEAKERS OFTEN PAUSE BRIEFLY MIDSENTENCE WHILE SEARCHING FOR PRECISE DOMAIN TERMINOLOGY SO KEEPING PREFIX PINNING ACTIVE ENSURES THE MODEL PRIORITIZES PROJECT VOCABULARY WITHOUT DUPLICATING CONTEXT MEMORY"
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "chunk_count": 102,
+        "chunk_p50_ms": 18.28,
+        "chunk_p95_ms": 25.3,
+        "chunk_max_ms": 58.49,
+        "flush_final_ms": 20.6,
+        "total_decode_ms": 1367.6,
+        "rtf": 0.0675,
+        "wer": 0.85,
+        "cer": 0.5897,
+        "term_hit_rate": 0.0,
+        "matched_terms": [],
+        "predicted_text": "US GOOD MONDAY EVERYONE RESPECTED MAY NOT BE WIMUKA ON BEHALF OF IRONIC TO WELCOME EVERYONE TO ALTER AN INCORPORATION ON AOB BOSSIONATE AND MEN IN THE WINDOW ARCHITECTURE AND SQL RIDE FRAME"
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "chunk_count": 374,
+        "chunk_p50_ms": 18.92,
+        "chunk_p95_ms": 22.08,
+        "chunk_max_ms": 39.2,
+        "flush_final_ms": 21.57,
+        "total_decode_ms": 4837.5,
+        "rtf": 0.0648,
+        "wer": 0.708,
+        "cer": 0.3651,
+        "term_hit_rate": 0.3846,
+        "matched_terms": [
+          "ARP",
+          "Host A",
+          "MAC address",
+          "broadcast domain",
+          "ARP table"
+        ],
+        "predicted_text": "TOURIST THEY HAVE A TEST WE MUST WE MUST FIRST LOOK AT HOW I OR B ALREADY UNDER THE NORMAL SITE CIRCUMSTAIN IN AN INTERNET NETWORK WANE HAS ONE TO COMMUNICATE WITH GAY OR ONE IS NO THE WAY A B I ADDRESSED WORLD IS CANNOT BUT A LAYER TWO FROM WITH TAO THE LATINISE THAT DETONATION MUST MAP AS REST THEREFORE HAS A BROADCAST AND IOB REQUEST ACROSS THE ENTIRE BROADCAST DOMAIN SCHEME WHO HAS AH THAT IDEA TELL ME MAC ADDRESS SO WHEN ROUTER R ONE IS RECEIVE THIS IS UNICAST IN THE A R B REPLY CONTAINING IS THE HARDWARE ADDRESS AND HOST A CAT THIS MAPPING IN EACH ARP TABLE HOWEVER PLAY PLAY HEY CLOTH INTENTION TO THE RIGHT SIDE OF THIS LINE"
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "chunk_count": 170,
+        "chunk_p50_ms": 18.46,
+        "chunk_p95_ms": 26.13,
+        "chunk_max_ms": 45.83,
+        "flush_final_ms": 40.66,
+        "total_decode_ms": 2279.7,
+        "rtf": 0.0672,
+        "wer": 0.7333,
+        "cer": 0.6466,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "forgot",
+          "write"
+        ],
+        "predicted_text": "OKAY SO NOW WE'LL TALK ABOUT MYSELF IN FIELD AH SO AIR BLANK FOR MYSELF IN SUNDAY WHERE WE WRITING SOME JOURNEY UP NINE DAYS BUT I FORGOT IT AND I DON'T WRITE ANYTHING AND YOU DON'T TALK ABOUT IT"
+      }
+    ]
+  },
+  {
+    "engine": "sherpa-onnx/zipformer-en (fp32, beam+hotwords, 200ms)",
+    "load_ms": 3150.4,
+    "rss_delta_mb": 389.0,
+    "peak_rss_mb": 559.8,
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "chunk_count": 32,
+        "chunk_p50_ms": 23.34,
+        "chunk_p95_ms": 33.55,
+        "chunk_max_ms": 39.08,
+        "flush_final_ms": 27.21,
+        "total_decode_ms": 552.1,
+        "rtf": 0.0886,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "REGARDING THE BACKEND TIMELINE WE NEED TO RESOLVE THE CURRENT DATABASE BOTTLENECK BEFORE FRIDAY"
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "chunk_count": 50,
+        "chunk_p50_ms": 22.57,
+        "chunk_p95_ms": 27.2,
+        "chunk_max_ms": 31.41,
+        "flush_final_ms": 48.3,
+        "total_decode_ms": 804.9,
+        "rtf": 0.0808,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "EVER TRIED EVER FAILED NO MATTER TRY AGAIN FAIL AGAIN FAIL BETTER"
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "chunk_count": 56,
+        "chunk_p50_ms": 22.56,
+        "chunk_p95_ms": 24.65,
+        "chunk_max_ms": 27.86,
+        "flush_final_ms": 24.51,
+        "total_decode_ms": 841.5,
+        "rtf": 0.0759,
+        "wer": 0.16,
+        "cer": 0.1279,
+        "term_hit_rate": 0.75,
+        "matched_terms": [
+          "payment queue",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "FROM A TECHNICAL PERSPECTIVE DECOUPLING THE PAYMENT QUEUE REDUCES LATENCY SPIK NEXT WEEK WE WILL REVIEW THE DEPLOYMENT CHECKLIST WITH ALL STAKEHOLDERS"
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "chunk_count": 133,
+        "chunk_p50_ms": 23.72,
+        "chunk_p95_ms": 34.64,
+        "chunk_max_ms": 70.53,
+        "flush_final_ms": 27.09,
+        "total_decode_ms": 2440.3,
+        "rtf": 0.0922,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "LET ME SHARE A QUICK UPDATE ON OUR SPRINT PROGRESS WE FINISHED PROFILING THE LOCAL INFERENCE PIPELINE AND VERIFIED THAT OUR SLIDING WINDOW KEEPS MEMORY USAGE STABLE BELOW THE TARGET THRESHOLD HOWEVER WE NOTICED MINOR LATENCY FLUCTUATIONS WHEN MULTIPLE BROWSER TABS RUN WEBRTC CALLS SIMULTANEOUSLY SO WE ARE PREPARING A ROLLBACK STRATEGY AND FINALIZING THE ACCEPTANCE CRITERIA BEFORE OUR RELEASE DEMO"
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "chunk_count": 210,
+        "chunk_p50_ms": 23.63,
+        "chunk_p95_ms": 36.97,
+        "chunk_max_ms": 75.46,
+        "flush_final_ms": 26.61,
+        "total_decode_ms": 3754.2,
+        "rtf": 0.0898,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "BEFORE WE LOCK THE ARCHITECTURE FOR THE PROTOTYPE I WANT TO WALK THROUGH THREE CRITICAL RISKS WE DISCOVERED DURING TESTING FIRST IF THE LOCAL SPEECH RECOGNITION BUFFER GROWS UNBOUNDED OVER A SIXTY MINUTE MEETING MEMORY CONSUMPTION CAN SPIKE UNEXPECTEDLY AND DEGRADE VIDEO CALL FRAME RATES SECOND NETWORK DEPENDENT SPEECH SERVICES INTRODUCE UNPREDICTABLE DELAYS ABOVE FIVE HUNDRED MILLISECONDS BREAKING THE NATURAL CONVERSATIONAL RHYTHM THIRD SPEAKERS OFTEN PAUSE BRIEFLY MID SENTENCE WHILE SEARCHING FOR PRECISE DOMAIN TERMINOLOGY SO KEEPING PREFIX PINNING ACTIVE ENSURES THE MODEL PRIORITIZES PROJECT VOCABULARY WITHOUT DUPLICATING CONTEXT MEMORY"
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "chunk_count": 102,
+        "chunk_p50_ms": 23.97,
+        "chunk_p95_ms": 32.64,
+        "chunk_max_ms": 41.61,
+        "flush_final_ms": 26.47,
+        "total_decode_ms": 1755.1,
+        "rtf": 0.0866,
+        "wer": 0.875,
+        "cer": 0.5897,
+        "term_hit_rate": 0.0,
+        "matched_terms": [],
+        "predicted_text": "US GOOD MONDAY EVERYONE RESPECTED MAY NOT BE WIMUKAN ON BEHALF OF IRONIC TO WELCOME EVERYONE TO ALTER AN INCORPORATION ON AOB BOSSIONATE AND MEN IN THE WINDOW ARCHITECTURE AND SEQUENT OF RODY FRAME"
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "chunk_count": 374,
+        "chunk_p50_ms": 25.26,
+        "chunk_p95_ms": 34.8,
+        "chunk_max_ms": 64.97,
+        "flush_final_ms": 27.89,
+        "total_decode_ms": 6673.8,
+        "rtf": 0.0894,
+        "wer": 0.708,
+        "cer": 0.3744,
+        "term_hit_rate": 0.2308,
+        "matched_terms": [
+          "Host A",
+          "MAC address",
+          "broadcast domain"
+        ],
+        "predicted_text": "TOURIST THEY HAVE A TEST WE MUST WE MUST FIRST LOOK AT HOW IR B ALREADY TAKEN UNDER THE NORMAL SITE CIRCUMSTAIN IN AN INTERNET NETWORK WANE HAS ONE TO COMMUNICATE WITH GAY OR ONE IS NO THE WAY A BI ADDRESSED WORLD IS CANNOT BUT A LAYER TWO FROM WITH TAO THE LATINISE THAT DETONATION MUST MY ADDRESSED THEREFORE HAS A BROADCAST AND IOB REQUEST ACROSS THE ENTIRE BROADCAST DOMAIN SCHEME WHO HAS AH THAT IDEA TELL ME MAC ADDRESS SO WHEN ROUTER R ONE IS RECEIVED THIS IS UNICAST IN THE A R B REPLY CONTAINING IS THE HARDWARE ADDRESS AND HOST A CAT THIS MAPPING IN EACH AH HOWEVER PLAY PLAY HEY CLOTH INTENTION TO THE RIGHT SIDE OF THIS LINE"
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "chunk_count": 170,
+        "chunk_p50_ms": 23.52,
+        "chunk_p95_ms": 38.25,
+        "chunk_max_ms": 47.86,
+        "flush_final_ms": 48.23,
+        "total_decode_ms": 2992.2,
+        "rtf": 0.0882,
+        "wer": 0.7333,
+        "cer": 0.6466,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "forgot",
+          "write"
+        ],
+        "predicted_text": "OKAY SO NOW WE'LL TALK ABOUT MYSELF IN FIELD AH SO AIR BLANK FOR MYSELF IN SUNDAY WHILE WE WRITING SOME JOURNEY UP NINE DAYS BUT I FORGOT IT AND I DON'T WRITE ANYTHING AND YOU DON'T TALK ABOUT IT"
+      }
+    ]
+  }
+]

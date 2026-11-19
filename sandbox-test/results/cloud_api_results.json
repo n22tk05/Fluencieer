@@ -1,0 +1,556 @@
+[
+  {
+    "provider": "groq/whisper-large-v3-turbo (REST+prompt)",
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "latency_ms": 992.7,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "Regarding the backend timeline, we need to resolve the current database bottleneck before Friday."
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "latency_ms": 884.2,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "Ever tried, ever failed. No matter. Try again. Fail again. Fail better."
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "latency_ms": 888.1,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "payment queue",
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "From a technical perspective, decoupling the payment queue reduces latency spikes during peak traffic. Next week we will review the deployment checklist with all stakeholders."
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "latency_ms": 970.1,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "Let me share a quick update on our sprint progress. We finished profiling the local inference pipeline and verified that our sliding window keeps memory usage stable below the target threshold. However, we noticed minor latency fluctuations when multiple browser tabs run WebRTC calls simultaneously, so we are preparing a rollback strategy and finalizing the acceptance criteria before our release demo."
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "latency_ms": 1312.7,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0444,
+        "cer": 0.034,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. First, if the local speech recognition buffer grows unbounded over a 60-minute meeting, memory consumption can spike unexpectedly and degrade video call frame rates. Second, network-dependent speech services introduce unpredictable delays above 500 milliseconds, breaking the natural conversational rhythm. 3. Speakers often pause briefly mid-sentence while searching for precise domain terminology, so keeping prefix pinning active ensures the model prioritizes project vocabulary without duplicating context memory."
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "latency_ms": 1324.1,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.275,
+        "cer": 0.1496,
+        "term_hit_rate": 0.8333,
+        "matched_terms": [
+          "fellow classmates",
+          "technical presentation",
+          "ARP Poisoning",
+          "MITM Architecture",
+          "Cisco Enterprise Defense"
+        ],
+        "predicted_text": "Good morning everyone, respect to instructor and fellow classmates, my name is Yên Nguyễn Bú Kăn. On behalf of our group, I want to welcome everyone to our technical presentation on ARP Poisoning and MITM Architecture and Cisco Enterprise Defense."
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "latency_ms": 1635.7,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.3274,
+        "cer": 0.1654,
+        "term_hit_rate": 0.6923,
+        "matched_terms": [
+          "ARP",
+          "Host A",
+          "Layer 2",
+          "MAC address",
+          "ARP Request",
+          "broadcast domain",
+          "Router R1",
+          "ARP Reply",
+          "ARP table"
+        ],
+        "predicted_text": "To understand how a chat is successful, we must first look at how ARP is already under the normal circumstance in an internet network. One host wants to communicate with Gate or wants to know the Gateway API address but it cannot package a layer 2 frame without the destination MAC address. Therefore, HOST A, broadcast and ARP request across the entire broadcast domain asking who has a .api tell me MAC address. So when Router R1 receives this, its Unicast and ARP reply containing its hardware address, and HOST A, catch this mapping in its ARP table. However, please pay close attention to the right style of this line."
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "latency_ms": 1224.6,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.5333,
+        "cer": 0.4812,
+        "term_hit_rate": 0.8,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "write"
+        ],
+        "predicted_text": "Okay, so now I will talk about myself in few days. So I have planned for myself in Sunday about writing some journey of my day. But I forget it and I don't write anything and I don't talk about it."
+      }
+    ]
+  },
+  {
+    "provider": "deepgram/nova-3 (REST+keyterm)",
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "latency_ms": 1977.1,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "Regarding the backend timeline, we need to resolve the current database bottleneck before Friday."
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "latency_ms": 2018.9,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "latency_ms": 2070.2,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "payment queue",
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "From a technical perspective, decoupling the payment queue reduces latency spikes during peak traffic. Next week we will review the deployment checklist with all stakeholders."
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "latency_ms": 2327.8,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "Let me share a quick update on our sprint progress. We finished profiling the local inference pipeline and verified that our sliding window keeps memory usage stable below the target threshold. However, we noticed minor latency fluctuations when multiple browser tabs run WebRTC calls simultaneously, so we are preparing a rollback strategy and finalizing the acceptance criteria before our release demo."
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "latency_ms": 2565.7,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. First, if the local speech recognition buffer grows unbounded over a sixty minute meeting, memory consumption can spike unexpectedly and degrade video call frame rates. Second, network dependent speech services introduce unpredictable delays above five hundred milliseconds, breaking the natural conversational rhythm. Third, speakers often pause briefly mid sentence while searching for precise domain terminology, so keeping prefix pinning active ensures the model prioritizes project vocabulary without duplicating context memory."
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "latency_ms": 2433.0,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.425,
+        "cer": 0.2735,
+        "term_hit_rate": 0.6667,
+        "matched_terms": [
+          "fellow classmates",
+          "technical presentation",
+          "ARP Poisoning",
+          "Cisco Enterprise Defense"
+        ],
+        "predicted_text": "Good morning, everyone. Respect to instructor and fellow fellow classmates. My name is. On behalf of our group, I only to welcome everyone to our technical presentation on ARP Poisoning and mainly the mid door architecture and Cisco Enterprise Defense."
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "latency_ms": 2773.9,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.4779,
+        "cer": 0.2605,
+        "term_hit_rate": 0.5385,
+        "matched_terms": [
+          "ARP",
+          "Host A",
+          "MAC address",
+          "ARP Request",
+          "Router R1",
+          "ARP Reply",
+          "ARP table"
+        ],
+        "predicted_text": "To understand how a test is set, we must we must first look at how ARP already under the normal site circumstance in an Internet network. One has one to communicate with or one is know the gateway API address, but it cannot locate a layer two frame with without the... Let... Let's nation must... MAC address. Therefore, host a forecast and ARP request across the entire forecast domain asking who has... That's API tell me MAC address. So when router R1 is received, this is unicast and ARP reply containing is the hardware address. And host a cat... This mapping in its ARP table. However, we play... Pay close attention to the right style of this line."
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "latency_ms": 2330.1,
+        "first_interim_ms": null,
+        "finalize_ms": null,
+        "wer": 0.5,
+        "cer": 0.4812,
+        "term_hit_rate": 0.8,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "write"
+        ],
+        "predicted_text": "Okay. So now we'll talk about myself in few day. So I have plan for myself in Sunday about rewriting some journey of my day, but I forget it, and I don't write anything, and you don't talk about it."
+      }
+    ]
+  },
+  {
+    "provider": "deepgram/nova-3 (WS 200ms stream+keyterm)",
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "latency_ms": 5961.8,
+        "first_interim_ms": 1635.3,
+        "finalize_ms": 4043.3,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "Regarding the backend timeline, we need to resolve the current database bottleneck before Friday."
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "latency_ms": 9095.3,
+        "first_interim_ms": 1899.9,
+        "finalize_ms": 6413.6,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "Ever tried ever failed. No matter, try again. Fail again. Fail better."
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "latency_ms": 10033.3,
+        "first_interim_ms": 1835.3,
+        "finalize_ms": 7185.0,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "payment queue",
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "From a technical perspective, decoupling the payment queue reduces latency spikes during peak traffic. Next week we will review the deployment checklist with all stakeholders."
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "latency_ms": 22127.7,
+        "first_interim_ms": 1634.7,
+        "finalize_ms": 17103.4,
+        "wer": 0.0164,
+        "cer": 0.0175,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "Let me share a quick update on our sprint progress. We finished profiling the local inference pipeline and verified that our sliding window keeps memory usage stable below the target threshold, However, we noticed minor latency fluctuations when multiple browser tabs run WebRTC calls simultaneously, so we are preparing a rollback strategy and finalizing the acceptance criteria our release demo."
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "latency_ms": 34656.9,
+        "first_interim_ms": 1834.8,
+        "finalize_ms": 27086.4,
+        "wer": 0.0111,
+        "cer": 0.0046,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. First, the local speech recognition buffer grows unbounded over a sixty minute meeting, memory consumption can spike unexpectedly and degrade video call frame rates. Second, network dependent speech services introduce unpredictable delays above five hundred milliseconds, breaking the natural conversational rhythm. Third, speakers often pause briefly mid sentence while searching for precise domain terminology, So keeping prefix pinning active ensures the model prioritizes project vocabulary without duplicating context memory."
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "latency_ms": 17180.9,
+        "first_interim_ms": 3234.2,
+        "finalize_ms": 13107.8,
+        "wer": 0.4,
+        "cer": 0.3034,
+        "term_hit_rate": 0.5,
+        "matched_terms": [
+          "fellow classmates",
+          "ARP Poisoning",
+          "Cisco Enterprise Defense"
+        ],
+        "predicted_text": "Good morning, everyone. To and fellow fellow classmates. My name is. On behalf of our group, I only need to welcome everyone to our training presentation on ARP Poisoning and Manning the Middoor Architecture and Cisco Enterprise Defense."
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "latency_ms": 42563.9,
+        "first_interim_ms": 3289.0,
+        "finalize_ms": 30019.5,
+        "wer": 0.7611,
+        "cer": 0.5679,
+        "term_hit_rate": 0.3077,
+        "matched_terms": [
+          "ARP",
+          "Host A",
+          "MAC address",
+          "ARP Request"
+        ],
+        "predicted_text": "To understand how a trust is test, we must we must first look at how ARP already into the normal site circumstance in an Internet network. One host one to communicate with guy or one is know the guy by a b address, but this cannot locate a layer two frame with without the letting it let detonation must must must press. Therefore, host a forecast and ARP request across the entire forecast domain asking who has task API tell me MAC address"
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "latency_ms": 28029.4,
+        "first_interim_ms": 2411.9,
+        "finalize_ms": 21856.2,
+        "wer": 0.6,
+        "cer": 0.5414,
+        "term_hit_rate": 0.8,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "write"
+        ],
+        "predicted_text": "Okay. So now we'll talk about myself. In few day. So I have plan for myself in Sunday about writing some journey of night. I night. But I forget it. And I don't write anything, and I don't talk about it."
+      }
+    ]
+  },
+  {
+    "provider": "google/gemini-3.5-transcribe-live (WS 200ms stream+customVocab)",
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "latency_ms": 2226.2,
+        "first_interim_ms": 796.6,
+        "finalize_ms": 888.4,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "Regarding the backend timeline, we need to resolve the current database bottleneck before Friday."
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "latency_ms": 2962.0,
+        "first_interim_ms": 844.7,
+        "finalize_ms": 1060.6,
+        "wer": 0.1667,
+        "cer": 0.1846,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "Ever tried. Ever failed. No matter. Try again. Fail better. Fail again. Fail better."
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "latency_ms": 3169.4,
+        "first_interim_ms": 833.2,
+        "finalize_ms": 1100.6,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "payment queue",
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "From a technical perspective, decoupling the payment queue reduces latency spikes during peak traffic.\n\nNext week we will review the deployment checklist with all stakeholders."
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "latency_ms": 7115.9,
+        "first_interim_ms": 769.4,
+        "finalize_ms": 2802.4,
+        "wer": 0.0,
+        "cer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "Let me share a quick update on our sprint progress. We finished profiling the local inference pipeline and verified that our sliding window keeps memory usage stable below the target threshold. However, we noticed minor latency fluctuations when multiple browser tabs run WebRTC calls simultaneously, so we are preparing a rollback strategy and finalizing the acceptance criteria before our release demo."
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "latency_ms": 6529.9,
+        "first_interim_ms": 844.5,
+        "finalize_ms": 0.2,
+        "wer": 0.7778,
+        "cer": 0.8114,
+        "term_hit_rate": 0.0,
+        "matched_terms": [],
+        "predicted_text": "Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing."
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "latency_ms": 5497.8,
+        "first_interim_ms": 1451.5,
+        "finalize_ms": 2096.9,
+        "wer": 0.225,
+        "cer": 0.094,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "respected instructor",
+          "fellow classmates",
+          "technical presentation",
+          "ARP Poisoning",
+          "MITM Architecture",
+          "Cisco Enterprise Defense"
+        ],
+        "predicted_text": "Good morning everyone, respected instructor and fellow classmates. My name is Nguyen Tuan Khanh. On behalf of our group, I would like to welcome everyone to our technical presentation on ARP Poisoning, MITM Architecture, and Cisco Enterprise Defense."
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "latency_ms": 17479.5,
+        "first_interim_ms": 1640.2,
+        "finalize_ms": 6015.1,
+        "wer": 0.3982,
+        "cer": 0.3448,
+        "term_hit_rate": 0.6923,
+        "matched_terms": [
+          "ARP",
+          "Ethernet network",
+          "Host A",
+          "Gateway R1",
+          "Layer 2",
+          "MAC address",
+          "ARP Request",
+          "broadcast domain",
+          "Router R1"
+        ],
+        "predicted_text": "To understand how a switch works, we must first look at how ARP operates under the normal circumstance in an Ethernet network. When Host A wants to communicate with Gateway R1, it knows the gateway IP address, but it cannot package a Layer 2 frame without the destination MAC address. Therefore, Host A broadcasts an ARP Request across the entire broadcast domain asking who has that IP? Tell me MAC address. So, when Router R1 receives this, it unicasts an"
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "latency_ms": 5489.2,
+        "first_interim_ms": 1107.0,
+        "finalize_ms": 0.3,
+        "wer": 0.7333,
+        "cer": 0.609,
+        "term_hit_rate": 0.6,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey"
+        ],
+        "predicted_text": "Okay, so now I will talk about myself in a few days. Okay, so now I will talk about myself in a few days. For myself, on Sunday, I will be writing some journey."
+      }
+    ]
+  }
+]

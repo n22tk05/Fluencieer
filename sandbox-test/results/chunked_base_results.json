@@ -1,0 +1,2064 @@
+[
+  {
+    "strategy": "full-file (baseline)",
+    "engine": "faster-whisper/base.en+hotwords (cpu/int8)",
+    "rss_delta_mb": 98.5,
+    "peak_rss_mb": 271.3,
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "chunk_count": 1,
+        "avg_chunk_sec": 6.24,
+        "chunk_p50_ms": 703.9,
+        "chunk_p95_ms": 703.9,
+        "chunk_max_ms": 703.9,
+        "total_latency_ms": 704.1,
+        "rtf": 0.113,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "Regarding the backend timeline, we need to resolve the current database bottleneck before Friday.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 6.24,
+            "latency_ms": 703.9,
+            "text": "Regarding the backend timeline, we need to resolve the current database bottleneck before Friday."
+          }
+        ]
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "chunk_count": 1,
+        "avg_chunk_sec": 9.96,
+        "chunk_p50_ms": 570.0,
+        "chunk_p95_ms": 570.0,
+        "chunk_max_ms": 570.0,
+        "total_latency_ms": 570.2,
+        "rtf": 0.057,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "Ever tried, ever failed. No matter, try again. Fail again, fail better.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 9.96,
+            "latency_ms": 570.0,
+            "text": "Ever tried, ever failed. No matter, try again. Fail again, fail better."
+          }
+        ]
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "chunk_count": 1,
+        "avg_chunk_sec": 11.09,
+        "chunk_p50_ms": 717.2,
+        "chunk_p95_ms": 717.2,
+        "chunk_max_ms": 717.2,
+        "total_latency_ms": 717.4,
+        "rtf": 0.065,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "payment queue",
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "From a technical perspective, decoupling the payment queue reduces latency spikes during peak traffic. Next week we will review the deployment checklist with all stakeholders.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 11.09,
+            "latency_ms": 717.2,
+            "text": "From a technical perspective, decoupling the payment queue reduces latency spikes during peak traffic. Next week we will review the deployment checklist with all stakeholders."
+          }
+        ]
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "chunk_count": 1,
+        "avg_chunk_sec": 26.48,
+        "chunk_p50_ms": 1008.8,
+        "chunk_p95_ms": 1008.8,
+        "chunk_max_ms": 1008.8,
+        "total_latency_ms": 1009.0,
+        "rtf": 0.038,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "Let me share a quick update on our Sprint progress. We finished profiling the local inference pipeline and verified that our sliding window keeps memory usage stable below the target threshold. However, we noticed minor latency fluctuations when multiple browser tabs run WebRTC calls simultaneously, so we are preparing a rollback strategy and finalizing the acceptance criteria before our release demo.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 26.48,
+            "latency_ms": 1008.8,
+            "text": "Let me share a quick update on our Sprint progress. We finished profiling the local inference pipeline and verified that our sliding window keeps memory usage stable below the target threshold. However, we noticed minor latency fluctuations when multiple browser tabs run WebRTC calls simultaneously, so we are preparing a rollback strategy and finalizing the acceptance criteria before our release demo."
+          }
+        ]
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "chunk_count": 1,
+        "avg_chunk_sec": 41.82,
+        "chunk_p50_ms": 1622.8,
+        "chunk_p95_ms": 1622.8,
+        "chunk_max_ms": 1622.8,
+        "total_latency_ms": 1623.1,
+        "rtf": 0.039,
+        "wer": 0.0333,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. First, if the local speech recognition buffer grows unbounded over a 60-minute meeting, memory consumption can spike unexpectedly and degrade video call frame rates. Second, network-dependent speech services introduce unpredictable delays above 500 milliseconds, breaking the natural conversational rhythm. Third, speakers often pause briefly mid-sentence while searching for precise domain terminology, so keeping prefix pinning active ensures the model prioritizes project vocabulary without duplicating context memory.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 41.82,
+            "latency_ms": 1622.8,
+            "text": "Before we lock the architecture for the prototype, I want to walk through three critical risks we discovered during testing. First, if the local speech recognition buffer grows unbounded over a 60-minute meeting, memory consumption can spike unexpectedly and degrade video call frame rates. Second, network-dependent speech services introduce unpredictable delays above 500 milliseconds, breaking the natural conversational rhythm. Third, speakers often pause briefly mid-sentence while searching for precise domain terminology, so keeping prefix pinning active ensures the model prioritizes project vocabulary without duplicating context memory."
+          }
+        ]
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "chunk_count": 1,
+        "avg_chunk_sec": 20.27,
+        "chunk_p50_ms": 913.5,
+        "chunk_p95_ms": 913.5,
+        "chunk_max_ms": 913.5,
+        "total_latency_ms": 913.8,
+        "rtf": 0.045,
+        "wer": 0.5,
+        "term_hit_rate": 0.8333,
+        "matched_terms": [
+          "respected instructor",
+          "fellow classmates",
+          "technical presentation",
+          "ARP Poisoning",
+          "Cisco Enterprise Defense"
+        ],
+        "predicted_text": "Good morning, everyone, respected instructor, fellow classmates, my name is William O'Kam. I'm behalf of ION and to welcome everyone to our technical presentation on ARP Poisoning and many of the big though architecture and Cisco Enterprise Defense.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 20.27,
+            "latency_ms": 913.5,
+            "text": "Good morning, everyone, respected instructor, fellow classmates, my name is William O'Kam. I'm behalf of ION and to welcome everyone to our technical presentation on ARP Poisoning and many of the big though architecture and Cisco Enterprise Defense."
+          }
+        ]
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "chunk_count": 1,
+        "avg_chunk_sec": 74.69,
+        "chunk_p50_ms": 4862.3,
+        "chunk_p95_ms": 4862.3,
+        "chunk_max_ms": 4862.3,
+        "total_latency_ms": 4862.5,
+        "rtf": 0.065,
+        "wer": 0.4956,
+        "term_hit_rate": 0.7692,
+        "matched_terms": [
+          "ARP",
+          "Ethernet network",
+          "Host A",
+          "Layer 2",
+          "MAC address",
+          "ARP Request",
+          "broadcast domain",
+          "Router R1",
+          "ARP Reply",
+          "ARP table"
+        ],
+        "predicted_text": "To understand how to success, we must first look at how ARP already under the normal site, so can stay in an Ethernet network. One host, one to communicate with Gay, or one is known as the Gay Way API address. Well, it cannot be a Layer 2 frame without letting it happen. Attenation, Mac address. Therefore, host A broadcast and ARP request across the entire broadcast domain, a screen. Who has that idea? Tell me Mac address. So, going router R1 is received. This is unicast and ARP reply containing HTTP hardware address, and host a cat this mapping in its ARP table. However, play a Clue Intention to the right style of this line.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 74.69,
+            "latency_ms": 4862.3,
+            "text": "To understand how to success, we must first look at how ARP already under the normal site, so can stay in an Ethernet network. One host, one to communicate with Gay, or one is known as the Gay Way API address. Well, it cannot be a Layer 2 frame without letting it happen. Attenation, Mac address. Therefore, host A broadcast and ARP request across the entire broadcast domain, a screen. Who has that idea? Tell me Mac address. So, going router R1 is received. This is unicast and ARP reply containing HTTP hardware address, and host a cat this mapping in its ARP table. However, play a Clue Intention to the right style of this line."
+          }
+        ]
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "chunk_count": 1,
+        "avg_chunk_sec": 33.94,
+        "chunk_p50_ms": 1368.8,
+        "chunk_p95_ms": 1368.8,
+        "chunk_max_ms": 1368.8,
+        "total_latency_ms": 1369.5,
+        "rtf": 0.04,
+        "wer": 0.5333,
+        "term_hit_rate": 0.8,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "write"
+        ],
+        "predicted_text": "Okay, so now I will talk about myself in a few days. So I have a plan for myself in Sunday about writing some journey of my day, but I forget it and I don't write anything and even talk about it.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 33.94,
+            "latency_ms": 1368.8,
+            "text": "Okay, so now I will talk about myself in a few days. So I have a plan for myself in Sunday about writing some journey of my day, but I forget it and I don't write anything and even talk about it."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "strategy": "fixed-chunk 2.5s",
+    "engine": "faster-whisper/base.en+hotwords (cpu/int8)",
+    "rss_delta_mb": 6.4,
+    "peak_rss_mb": 274.1,
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "chunk_count": 3,
+        "avg_chunk_sec": 2.08,
+        "chunk_p50_ms": 887.2,
+        "chunk_p95_ms": 1026.5,
+        "chunk_max_ms": 1041.9,
+        "total_latency_ms": 2731.6,
+        "rtf": 0.438,
+        "wer": 1.7143,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "Regarding the backend timeline, we need a new update on the timeline, but we need a new update on the timeline, and we need a new update on the timeline. to resolve the current database bottleneck before. Friday.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.5,
+            "latency_ms": 1041.9,
+            "text": "Regarding the backend timeline, we need a new update on the timeline, but we need a new update on the timeline, and we need a new update on the timeline."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.5,
+            "latency_ms": 887.2,
+            "text": "to resolve the current database bottleneck before."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 1.24,
+            "latency_ms": 801.9,
+            "text": "Friday."
+          }
+        ]
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "chunk_count": 4,
+        "avg_chunk_sec": 2.49,
+        "chunk_p50_ms": 855.6,
+        "chunk_p95_ms": 860.7,
+        "chunk_max_ms": 861.5,
+        "total_latency_ms": 3399.2,
+        "rtf": 0.341,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "Ever tried, ever failed. No matter. Try again, fail again. fail better.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.5,
+            "latency_ms": 855.7,
+            "text": "Ever tried, ever failed."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.5,
+            "latency_ms": 861.5,
+            "text": "No matter."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.5,
+            "latency_ms": 855.4,
+            "text": "Try again, fail again."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 2.46,
+            "latency_ms": 825.8,
+            "text": "fail better."
+          }
+        ]
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "chunk_count": 5,
+        "avg_chunk_sec": 2.22,
+        "chunk_p50_ms": 883.1,
+        "chunk_p95_ms": 889.6,
+        "chunk_max_ms": 891.1,
+        "total_latency_ms": 4335.0,
+        "rtf": 0.391,
+        "wer": 0.28,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "payment queue",
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "From a technical perspective, decoupling- Meeting the payment queue reduces latency spikes during a few months. Speaking peak traffic. Next week we will... We will review the deployment checklist with all stakeholders.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.5,
+            "latency_ms": 875.3,
+            "text": "From a technical perspective, decoupling-"
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.5,
+            "latency_ms": 891.1,
+            "text": "Meeting the payment queue reduces latency spikes during a few months."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.5,
+            "latency_ms": 883.1,
+            "text": "Speaking peak traffic. Next week we will..."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 2.5,
+            "latency_ms": 883.8,
+            "text": "We will review the deployment checklist with all stakeholders."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 1.08,
+            "latency_ms": 800.3,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "chunk_count": 11,
+        "avg_chunk_sec": 2.41,
+        "chunk_p50_ms": 889.2,
+        "chunk_p95_ms": 1190.6,
+        "chunk_max_ms": 1412.2,
+        "total_latency_ms": 10345.1,
+        "rtf": 0.391,
+        "wer": 0.2131,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "Let me share a quick update on our Sprint Pro. progress. We finished profiling the The local inference pipeline and verify that are ████████. Sliding window keeps memory usage stable below. Hello the target threshold. However, ██████ ██████ ██████ ██████ However, we noticed minor latency fluctuate. Nations When Multiple Browser Tabs Run WebRTC WebRTC calls simultaneously. We are preparing a rollback strategy and fight. Analyzing the acceptance criteria before our release. Police demo",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.5,
+            "latency_ms": 898.0,
+            "text": "Let me share a quick update on our Sprint Pro."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.5,
+            "latency_ms": 889.2,
+            "text": "progress. We finished profiling the"
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.5,
+            "latency_ms": 942.1,
+            "text": "The local inference pipeline and verify that are ████████."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 2.5,
+            "latency_ms": 883.5,
+            "text": "Sliding window keeps memory usage stable below."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 2.5,
+            "latency_ms": 969.0,
+            "text": "Hello the target threshold. However, ██████ ██████ ██████ ██████"
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 2.5,
+            "latency_ms": 865.4,
+            "text": "However, we noticed minor latency fluctuate."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 2.5,
+            "latency_ms": 895.5,
+            "text": "Nations When Multiple Browser Tabs Run WebRTC"
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 2.5,
+            "latency_ms": 879.0,
+            "text": "WebRTC calls simultaneously."
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 2.5,
+            "latency_ms": 1412.2,
+            "text": "We are preparing a rollback strategy and fight."
+          },
+          {
+            "chunk_index": 10,
+            "chunk_sec": 2.5,
+            "latency_ms": 879.3,
+            "text": "Analyzing the acceptance criteria before our release."
+          },
+          {
+            "chunk_index": 11,
+            "chunk_sec": 1.48,
+            "latency_ms": 829.5,
+            "text": "Police demo"
+          }
+        ]
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "chunk_count": 17,
+        "avg_chunk_sec": 2.46,
+        "chunk_p50_ms": 585.7,
+        "chunk_p95_ms": 1321.2,
+        "chunk_max_ms": 2591.5,
+        "total_latency_ms": 12795.9,
+        "rtf": 0.306,
+        "wer": 0.4333,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "Before we lock the architecture for the prototype. I want to walk through three critical risks. prefix we discovered during testing. First, if the local speech recognition button is a bit of a bit of a bit of a bit of a bit of a bit of a bit buffer grows unbounded over a 60 minute meeting. Memory consumption can spike unexplainable. Effectively and degrade video call frame rates. 2. Network Depends Independent speech services introduce unpredictable to- It lays above 500 milliseconds. Breaking the natural conversational rhythm Third, speakers often pause. This briefly mid-sentence while searching for precise- domain terminology, so keeping prefix- prefix pinning active ensures the model prioritized. This project vocabulary without duplicating In context memory.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.5,
+            "latency_ms": 854.0,
+            "text": "Before we lock the architecture for the prototype."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.5,
+            "latency_ms": 871.0,
+            "text": "I want to walk through three critical risks."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.5,
+            "latency_ms": 842.8,
+            "text": "prefix we discovered during testing."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 2.5,
+            "latency_ms": 1003.6,
+            "text": "First, if the local speech recognition button is a bit of a bit of a bit of a bit of a bit of a bit of a bit"
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 2.5,
+            "latency_ms": 563.5,
+            "text": "buffer grows unbounded over a 60 minute meeting."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 2.5,
+            "latency_ms": 470.7,
+            "text": "Memory consumption can spike unexplainable."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 2.5,
+            "latency_ms": 508.5,
+            "text": "Effectively and degrade video call frame rates."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 2.5,
+            "latency_ms": 656.3,
+            "text": "2. Network Depends"
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 2.5,
+            "latency_ms": 495.9,
+            "text": "Independent speech services introduce unpredictable to-"
+          },
+          {
+            "chunk_index": 10,
+            "chunk_sec": 2.5,
+            "latency_ms": 525.4,
+            "text": "It lays above 500 milliseconds."
+          },
+          {
+            "chunk_index": 11,
+            "chunk_sec": 2.5,
+            "latency_ms": 585.7,
+            "text": "Breaking the natural conversational rhythm"
+          },
+          {
+            "chunk_index": 12,
+            "chunk_sec": 2.5,
+            "latency_ms": 558.3,
+            "text": "Third, speakers often pause."
+          },
+          {
+            "chunk_index": 13,
+            "chunk_sec": 2.5,
+            "latency_ms": 615.4,
+            "text": "This briefly mid-sentence while searching for precise-"
+          },
+          {
+            "chunk_index": 14,
+            "chunk_sec": 2.5,
+            "latency_ms": 590.6,
+            "text": "domain terminology, so keeping prefix-"
+          },
+          {
+            "chunk_index": 15,
+            "chunk_sec": 2.5,
+            "latency_ms": 547.6,
+            "text": "prefix pinning active ensures the model prioritized."
+          },
+          {
+            "chunk_index": 16,
+            "chunk_sec": 2.5,
+            "latency_ms": 2591.5,
+            "text": "This project vocabulary without duplicating"
+          },
+          {
+            "chunk_index": 17,
+            "chunk_sec": 1.82,
+            "latency_ms": 511.6,
+            "text": "In context memory."
+          }
+        ]
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "chunk_count": 9,
+        "avg_chunk_sec": 2.25,
+        "chunk_p50_ms": 529.4,
+        "chunk_p95_ms": 1985.6,
+        "chunk_max_ms": 2334.1,
+        "total_latency_ms": 7634.3,
+        "rtf": 0.377,
+        "wer": 0.8,
+        "term_hit_rate": 0.5,
+        "matched_terms": [
+          "fellow classmates",
+          "MITM Architecture",
+          "Cisco Enterprise Defense"
+        ],
+        "predicted_text": "Ugh, it's... Good Monday, everyone, respect the interview. To her, I flow fellow classmates, my... MITM I will look a-on into where from everyone to a- Analytical presentation on ARP University of Washington and MITM Architecture. and Cisco Enterprise Defense.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.5,
+            "latency_ms": 469.8,
+            "text": "Ugh, it's..."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.5,
+            "latency_ms": 529.4,
+            "text": "Good Monday, everyone, respect the interview."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.5,
+            "latency_ms": 520.9,
+            "text": "To her, I flow fellow classmates, my..."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 2.5,
+            "latency_ms": 2334.1,
+            "text": "MITM"
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 2.5,
+            "latency_ms": 538.1,
+            "text": "I will look a-on into where from everyone to a-"
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 2.5,
+            "latency_ms": 1462.9,
+            "text": "Analytical presentation on ARP"
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 2.5,
+            "latency_ms": 1312.4,
+            "text": "University of Washington and MITM Architecture."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 2.5,
+            "latency_ms": 462.6,
+            "text": "and Cisco Enterprise Defense."
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 0.27,
+            "latency_ms": 2.4,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "chunk_count": 30,
+        "avg_chunk_sec": 2.49,
+        "chunk_p50_ms": 519.3,
+        "chunk_p95_ms": 1574.2,
+        "chunk_max_ms": 6265.1,
+        "total_latency_ms": 24300.5,
+        "rtf": 0.325,
+        "wer": 0.8319,
+        "term_hit_rate": 0.7692,
+        "matched_terms": [
+          "ARP",
+          "Ethernet network",
+          "Host A",
+          "Gateway R1",
+          "Layer 2",
+          "MAC address",
+          "ARP Request",
+          "broadcast domain",
+          "Router R1",
+          "ARP table"
+        ],
+        "predicted_text": "To understand how a trust is set. Next, we move first. Host look at ARP. Alright, take another normal site. So, come stay in. It's an Ethernet network. 1, 2, Communicate W- Gateway R1 is known as the Gateway R1. A, W, A, W, A, B, I, address, well, it can... ARP Request, ARP, Layer 2, Frame with... With now, there is nothing in it. That's the night. Mission, Mass, ARP. MAC address. Host A, Request, and ARP. We request across the entire broadcast domain. Command domain esteem, who has... That's the idea. Tell me... Mac address, so going route to... Router R1, Let's Resteep this. It's Unicast and ARP. Your reply concerning is the app. hardware address, and Host A, I cat this mapping. Meeting ARP table. However, please. Play a cloud intention. Return to the right side of this line. Go ahead and check that out.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.5,
+            "latency_ms": 488.5,
+            "text": ""
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.5,
+            "latency_ms": 544.3,
+            "text": "To understand how a trust is set."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.5,
+            "latency_ms": 541.9,
+            "text": "Next, we move first."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 2.5,
+            "latency_ms": 502.9,
+            "text": "Host look at ARP."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 2.5,
+            "latency_ms": 484.2,
+            "text": "Alright, take another normal site."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 2.5,
+            "latency_ms": 488.7,
+            "text": "So, come stay in."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 2.5,
+            "latency_ms": 507.8,
+            "text": "It's an Ethernet network."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 2.5,
+            "latency_ms": 6265.1,
+            "text": "1, 2, Communicate W-"
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 2.5,
+            "latency_ms": 564.3,
+            "text": "Gateway R1 is known as the Gateway R1."
+          },
+          {
+            "chunk_index": 10,
+            "chunk_sec": 2.5,
+            "latency_ms": 591.3,
+            "text": "A, W, A, W, A, B, I, address, well, it can..."
+          },
+          {
+            "chunk_index": 11,
+            "chunk_sec": 2.5,
+            "latency_ms": 571.9,
+            "text": "ARP Request, ARP, Layer 2, Frame with..."
+          },
+          {
+            "chunk_index": 12,
+            "chunk_sec": 2.5,
+            "latency_ms": 539.8,
+            "text": "With now, there is nothing in it."
+          },
+          {
+            "chunk_index": 13,
+            "chunk_sec": 2.5,
+            "latency_ms": 544.3,
+            "text": "That's the night."
+          },
+          {
+            "chunk_index": 14,
+            "chunk_sec": 2.5,
+            "latency_ms": 527.7,
+            "text": "Mission, Mass, ARP."
+          },
+          {
+            "chunk_index": 15,
+            "chunk_sec": 2.5,
+            "latency_ms": 843.0,
+            "text": "MAC address."
+          },
+          {
+            "chunk_index": 16,
+            "chunk_sec": 2.5,
+            "latency_ms": 499.6,
+            "text": "Host A, Request, and ARP."
+          },
+          {
+            "chunk_index": 17,
+            "chunk_sec": 2.5,
+            "latency_ms": 510.9,
+            "text": "We request across the entire broadcast domain."
+          },
+          {
+            "chunk_index": 18,
+            "chunk_sec": 2.5,
+            "latency_ms": 1479.4,
+            "text": "Command domain esteem, who has..."
+          },
+          {
+            "chunk_index": 19,
+            "chunk_sec": 2.5,
+            "latency_ms": 598.1,
+            "text": "That's the idea. Tell me..."
+          },
+          {
+            "chunk_index": 20,
+            "chunk_sec": 2.5,
+            "latency_ms": 507.4,
+            "text": "Mac address, so going route to..."
+          },
+          {
+            "chunk_index": 21,
+            "chunk_sec": 2.5,
+            "latency_ms": 1009.6,
+            "text": "Router R1, Let's Resteep this."
+          },
+          {
+            "chunk_index": 22,
+            "chunk_sec": 2.5,
+            "latency_ms": 482.5,
+            "text": "It's Unicast and ARP."
+          },
+          {
+            "chunk_index": 23,
+            "chunk_sec": 2.5,
+            "latency_ms": 477.2,
+            "text": "Your reply concerning is the app."
+          },
+          {
+            "chunk_index": 24,
+            "chunk_sec": 2.5,
+            "latency_ms": 1651.7,
+            "text": "hardware address, and Host A,"
+          },
+          {
+            "chunk_index": 25,
+            "chunk_sec": 2.5,
+            "latency_ms": 510.9,
+            "text": "I cat this mapping."
+          },
+          {
+            "chunk_index": 26,
+            "chunk_sec": 2.5,
+            "latency_ms": 583.4,
+            "text": "Meeting ARP table."
+          },
+          {
+            "chunk_index": 27,
+            "chunk_sec": 2.5,
+            "latency_ms": 476.4,
+            "text": "However, please."
+          },
+          {
+            "chunk_index": 28,
+            "chunk_sec": 2.5,
+            "latency_ms": 506.7,
+            "text": "Play a cloud intention."
+          },
+          {
+            "chunk_index": 29,
+            "chunk_sec": 2.5,
+            "latency_ms": 505.8,
+            "text": "Return to the right side of this line."
+          },
+          {
+            "chunk_index": 30,
+            "chunk_sec": 2.19,
+            "latency_ms": 490.2,
+            "text": "Go ahead and check that out."
+          }
+        ]
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "chunk_count": 14,
+        "avg_chunk_sec": 2.42,
+        "chunk_p50_ms": 505.9,
+        "chunk_p95_ms": 1358.3,
+        "chunk_max_ms": 1550.6,
+        "total_latency_ms": 8814.0,
+        "rtf": 0.26,
+        "wer": 0.9333,
+        "term_hit_rate": 0.8,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "write"
+        ],
+        "predicted_text": "Okay, so now... I will talk about myself. In a few days. Uh, so... I'll play for myself. So, in Sunday, about writing. This is Simon. Uh, journey. I'm not going to be up my day. Uh... But I forget it. I don't write anything. How are you?",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.5,
+            "latency_ms": 490.1,
+            "text": "Okay, so now..."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.5,
+            "latency_ms": 506.3,
+            "text": "I will talk about myself."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.5,
+            "latency_ms": 533.6,
+            "text": "In a few days."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 2.5,
+            "latency_ms": 513.0,
+            "text": "Uh, so..."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 2.5,
+            "latency_ms": 519.1,
+            "text": "I'll play for myself."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 2.5,
+            "latency_ms": 467.2,
+            "text": "So, in Sunday, about writing."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 2.5,
+            "latency_ms": 1550.6,
+            "text": "This is Simon."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 2.5,
+            "latency_ms": 502.9,
+            "text": "Uh, journey."
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 2.5,
+            "latency_ms": 505.6,
+            "text": "I'm not going to be up my day."
+          },
+          {
+            "chunk_index": 10,
+            "chunk_sec": 2.5,
+            "latency_ms": 464.0,
+            "text": "Uh..."
+          },
+          {
+            "chunk_index": 11,
+            "chunk_sec": 2.5,
+            "latency_ms": 496.3,
+            "text": "But I forget it."
+          },
+          {
+            "chunk_index": 12,
+            "chunk_sec": 2.5,
+            "latency_ms": 515.2,
+            "text": "I don't write anything."
+          },
+          {
+            "chunk_index": 13,
+            "chunk_sec": 2.5,
+            "latency_ms": 1254.8,
+            "text": "How are you?"
+          },
+          {
+            "chunk_index": 14,
+            "chunk_sec": 1.44,
+            "latency_ms": 492.5,
+            "text": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "strategy": "fixed-chunk 4.5s",
+    "engine": "faster-whisper/base.en+hotwords (cpu/int8)",
+    "rss_delta_mb": 4.3,
+    "peak_rss_mb": 275.8,
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "chunk_count": 2,
+        "avg_chunk_sec": 3.12,
+        "chunk_p50_ms": 506.6,
+        "chunk_p95_ms": 536.7,
+        "chunk_max_ms": 540.1,
+        "total_latency_ms": 1013.4,
+        "rtf": 0.163,
+        "wer": 0.0714,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "Regarding the backend timeline, we need to resolve the current database bottleneck. Check before Friday.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.5,
+            "latency_ms": 540.1,
+            "text": "Regarding the backend timeline, we need to resolve the current database bottleneck."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 1.74,
+            "latency_ms": 473.0,
+            "text": "Check before Friday."
+          }
+        ]
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "chunk_count": 3,
+        "avg_chunk_sec": 3.32,
+        "chunk_p50_ms": 491.5,
+        "chunk_p95_ms": 514.7,
+        "chunk_max_ms": 517.2,
+        "total_latency_ms": 1011.9,
+        "rtf": 0.102,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "Ever tried, ever failed. No matter. Try again, fail again, fail better.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.5,
+            "latency_ms": 517.2,
+            "text": "Ever tried, ever failed. No matter."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.5,
+            "latency_ms": 491.5,
+            "text": "Try again, fail again, fail better."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 0.96,
+            "latency_ms": 2.8,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "chunk_count": 3,
+        "avg_chunk_sec": 3.7,
+        "chunk_p50_ms": 507.2,
+        "chunk_p95_ms": 546.7,
+        "chunk_max_ms": 551.1,
+        "total_latency_ms": 1551.1,
+        "rtf": 0.14,
+        "wer": 0.04,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "payment queue",
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "From a technical perspective, decoupling the payment queue reduces latency spikes. spikes during peak traffic. Next week we will review the deployment checklist. with all stakeholders.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.5,
+            "latency_ms": 507.2,
+            "text": "From a technical perspective, decoupling the payment queue reduces latency spikes."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.5,
+            "latency_ms": 551.1,
+            "text": "spikes during peak traffic. Next week we will review the deployment checklist."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.08,
+            "latency_ms": 492.2,
+            "text": "with all stakeholders."
+          }
+        ]
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "chunk_count": 6,
+        "avg_chunk_sec": 4.41,
+        "chunk_p50_ms": 744.4,
+        "chunk_p95_ms": 940.2,
+        "chunk_max_ms": 987.6,
+        "total_latency_ms": 4530.8,
+        "rtf": 0.171,
+        "wer": 0.1475,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "Let me share a quick update on our sprint progress. We finished pro- profiling the local inference pipeline and verify that our sliding window keeps memory. usage stable below the target threshold. However, we noticed that the This minor latency fluctuations when multiple browser tabs run WebRTC. We call simultaneously, so we are preparing a rollback strategy and fun. Analyzing the acceptance criteria before our release demo.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.5,
+            "latency_ms": 723.4,
+            "text": "Let me share a quick update on our sprint progress. We finished pro-"
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.5,
+            "latency_ms": 798.0,
+            "text": "profiling the local inference pipeline and verify that our sliding window keeps memory."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 4.5,
+            "latency_ms": 987.6,
+            "text": "usage stable below the target threshold. However, we noticed that the"
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 4.5,
+            "latency_ms": 765.5,
+            "text": "This minor latency fluctuations when multiple browser tabs run WebRTC."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 4.5,
+            "latency_ms": 673.1,
+            "text": "We call simultaneously, so we are preparing a rollback strategy and fun."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 3.98,
+            "latency_ms": 582.0,
+            "text": "Analyzing the acceptance criteria before our release demo."
+          }
+        ]
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "chunk_count": 10,
+        "avg_chunk_sec": 4.18,
+        "chunk_p50_ms": 598.9,
+        "chunk_p95_ms": 626.7,
+        "chunk_max_ms": 639.1,
+        "total_latency_ms": 5900.8,
+        "rtf": 0.141,
+        "wer": 0.1667,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "Before we lock the architecture for the prototype, I want to walk through three critical... The physical risks we discovered during testing. First, if the locals- Speech recognition buffer grows unbounded over a 60-minute meeting. Consumption can spike unexpectedly and degrade video call frame rates. Second, Network Dependent Speech Services Introduce Unpredictable to- The lays above 500 milliseconds. Breaking the natural conversational riff. 3. Speakers often pause briefly mid-sentence whilst Searching for precise domain terminology, so keeping prefix pinning active in- ensures the model prioritizes project vocabulary without duplicating context. Next Memory",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.5,
+            "latency_ms": 597.9,
+            "text": "Before we lock the architecture for the prototype, I want to walk through three critical..."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.5,
+            "latency_ms": 609.4,
+            "text": "The physical risks we discovered during testing. First, if the locals-"
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 4.5,
+            "latency_ms": 606.6,
+            "text": "Speech recognition buffer grows unbounded over a 60-minute meeting."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 4.5,
+            "latency_ms": 599.8,
+            "text": "Consumption can spike unexpectedly and degrade video call frame rates."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 4.5,
+            "latency_ms": 639.1,
+            "text": "Second, Network Dependent Speech Services Introduce Unpredictable to-"
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 4.5,
+            "latency_ms": 611.6,
+            "text": "The lays above 500 milliseconds. Breaking the natural conversational riff."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 4.5,
+            "latency_ms": 572.1,
+            "text": "3. Speakers often pause briefly mid-sentence whilst"
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 4.5,
+            "latency_ms": 555.9,
+            "text": "Searching for precise domain terminology, so keeping prefix pinning active in-"
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 4.5,
+            "latency_ms": 584.7,
+            "text": "ensures the model prioritizes project vocabulary without duplicating context."
+          },
+          {
+            "chunk_index": 10,
+            "chunk_sec": 1.32,
+            "latency_ms": 521.7,
+            "text": "Next Memory"
+          }
+        ]
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "chunk_count": 5,
+        "avg_chunk_sec": 4.05,
+        "chunk_p50_ms": 581.0,
+        "chunk_p95_ms": 625.1,
+        "chunk_max_ms": 632.9,
+        "total_latency_ms": 2831.3,
+        "rtf": 0.14,
+        "wer": 0.625,
+        "term_hit_rate": 0.3333,
+        "matched_terms": [
+          "ARP Poisoning",
+          "Cisco Enterprise Defense"
+        ],
+        "predicted_text": "Good morning, everyone, respect it. My name is Jupyter, I'm a fellow plus my, my name is Mika. On behalf of ARP, I am honored to welcome everyone to our technical research session. presentation on ARP Poisoning and many of the video architecture. Cisco Enterprise Defense.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.5,
+            "latency_ms": 534.7,
+            "text": "Good morning, everyone, respect it."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.5,
+            "latency_ms": 632.9,
+            "text": "My name is Jupyter, I'm a fellow plus my, my name is Mika."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 4.5,
+            "latency_ms": 594.1,
+            "text": "On behalf of ARP, I am honored to welcome everyone to our technical research session."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 4.5,
+            "latency_ms": 581.0,
+            "text": "presentation on ARP Poisoning and many of the video architecture."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 2.27,
+            "latency_ms": 487.6,
+            "text": "Cisco Enterprise Defense."
+          }
+        ]
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "chunk_count": 17,
+        "avg_chunk_sec": 4.39,
+        "chunk_p50_ms": 1970.4,
+        "chunk_p95_ms": 9937.6,
+        "chunk_max_ms": 22022.6,
+        "total_latency_ms": 54643.4,
+        "rtf": 0.732,
+        "wer": 0.6903,
+        "term_hit_rate": 0.7692,
+        "matched_terms": [
+          "ARP",
+          "Ethernet network",
+          "Host A",
+          "Layer 2",
+          "MAC address",
+          "ARP Request",
+          "broadcast domain",
+          "ARP Reply",
+          "ARP table",
+          "Gratuitous ARP"
+        ],
+        "predicted_text": "To understand how... Request a Syst, we more first look at ARP. ARP, alright, take another normal site. So, Chrome Spang in Ethernet network. R1, 2, Gateway, Gateway, ARP1, is Node-A-GRA. A, W, A, B, I, address, well, this cannot be a Layer 2 frame with... With now, let me... let me... let... Detonation, Mass, Mass, Mass. That's for Host A, broadcast and ARP request. Press across the entire broadcast domain a screen who has a tss- That's the idea, tell me MAC address. Gratuitous ARP R1 is received. This is unique. broadcast and ARP reply containing is the hardware address. And host a cat this mapping in its... ARP table, however, please. Play a clear intention to the right style of this... Bye.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.5,
+            "latency_ms": 1781.6,
+            "text": "To understand how..."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.5,
+            "latency_ms": 1970.4,
+            "text": "Request a Syst, we more first look at ARP."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 4.5,
+            "latency_ms": 552.3,
+            "text": "ARP, alright, take another normal site."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 4.5,
+            "latency_ms": 554.0,
+            "text": "So, Chrome Spang in Ethernet network."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 4.5,
+            "latency_ms": 3395.6,
+            "text": "R1, 2, Gateway, Gateway, ARP1, is Node-A-GRA."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 4.5,
+            "latency_ms": 2869.3,
+            "text": "A, W, A, B, I, address, well, this cannot be a Layer 2 frame with..."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 4.5,
+            "latency_ms": 2089.7,
+            "text": "With now, let me... let me... let..."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 4.5,
+            "latency_ms": 1893.5,
+            "text": "Detonation, Mass, Mass, Mass."
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 4.5,
+            "latency_ms": 2475.7,
+            "text": "That's for Host A, broadcast and ARP request."
+          },
+          {
+            "chunk_index": 10,
+            "chunk_sec": 4.5,
+            "latency_ms": 22022.6,
+            "text": "Press across the entire broadcast domain a screen who has a tss-"
+          },
+          {
+            "chunk_index": 11,
+            "chunk_sec": 4.5,
+            "latency_ms": 593.6,
+            "text": "That's the idea, tell me MAC address."
+          },
+          {
+            "chunk_index": 12,
+            "chunk_sec": 4.5,
+            "latency_ms": 618.5,
+            "text": "Gratuitous ARP R1 is received. This is unique."
+          },
+          {
+            "chunk_index": 13,
+            "chunk_sec": 4.5,
+            "latency_ms": 561.6,
+            "text": "broadcast and ARP reply containing is the hardware address."
+          },
+          {
+            "chunk_index": 14,
+            "chunk_sec": 4.5,
+            "latency_ms": 6916.4,
+            "text": "And host a cat this mapping in its..."
+          },
+          {
+            "chunk_index": 15,
+            "chunk_sec": 4.5,
+            "latency_ms": 1893.5,
+            "text": "ARP table, however, please."
+          },
+          {
+            "chunk_index": 16,
+            "chunk_sec": 4.5,
+            "latency_ms": 2028.9,
+            "text": "Play a clear intention to the right style of this..."
+          },
+          {
+            "chunk_index": 17,
+            "chunk_sec": 2.69,
+            "latency_ms": 2422.7,
+            "text": "Bye."
+          }
+        ]
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "chunk_count": 8,
+        "avg_chunk_sec": 4.24,
+        "chunk_p50_ms": 542.8,
+        "chunk_p95_ms": 6413.2,
+        "chunk_max_ms": 7586.3,
+        "total_latency_ms": 15770.3,
+        "rtf": 0.465,
+        "wer": 1.5333,
+        "term_hit_rate": 0.8,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "write"
+        ],
+        "predicted_text": "Okay, so now I will talk about myself. So, if you would like to see more of the video, I would like to see more of the video in a few days. I'll play for myself in Sunday. That's it, about what we're writing this sermon. journey, up my day. But I forget it. And I don't write anything and you don't talk about it. Mmm...",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.5,
+            "latency_ms": 4234.6,
+            "text": "Okay, so now I will talk about myself."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.5,
+            "latency_ms": 7586.3,
+            "text": "So, if you would like to see more of the video, I would like to see more of the video in a few days."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 4.5,
+            "latency_ms": 509.3,
+            "text": "I'll play for myself in Sunday."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 4.5,
+            "latency_ms": 526.9,
+            "text": "That's it, about what we're writing this sermon."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 4.5,
+            "latency_ms": 507.3,
+            "text": "journey, up my day."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 4.5,
+            "latency_ms": 504.0,
+            "text": "But I forget it."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 4.5,
+            "latency_ms": 558.8,
+            "text": "And I don't write anything and you don't talk about it."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 2.44,
+            "latency_ms": 1341.3,
+            "text": "Mmm..."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "strategy": "pause-aware 2-5s + context",
+    "engine": "faster-whisper/base.en+hotwords (cpu/int8)",
+    "rss_delta_mb": 14.7,
+    "peak_rss_mb": 277.3,
+    "samples": [
+      {
+        "sample_id": "L01_6s",
+        "duration_sec": 6.24,
+        "chunk_count": 2,
+        "avg_chunk_sec": 3.12,
+        "chunk_p50_ms": 2072.3,
+        "chunk_p95_ms": 3474.0,
+        "chunk_max_ms": 3629.7,
+        "total_latency_ms": 4145.0,
+        "rtf": 0.665,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "backend timeline",
+          "database bottleneck"
+        ],
+        "predicted_text": "Regarding the backend timeline, we need to resolve the current database bottleneck before Friday.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.04,
+            "latency_ms": 3629.7,
+            "text": "Regarding the backend timeline,"
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.2,
+            "latency_ms": 514.9,
+            "text": "we need to resolve the current database bottleneck before Friday."
+          }
+        ]
+      },
+      {
+        "sample_id": "H01_10s_human",
+        "duration_sec": 9.96,
+        "chunk_count": 3,
+        "avg_chunk_sec": 3.32,
+        "chunk_p50_ms": 603.8,
+        "chunk_p95_ms": 617.5,
+        "chunk_max_ms": 619.0,
+        "total_latency_ms": 1825.2,
+        "rtf": 0.183,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "ever tried",
+          "fail better"
+        ],
+        "predicted_text": "Ever tried, ever failed. No matter, try again. Fail again. Fail better.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 3.48,
+            "latency_ms": 601.7,
+            "text": "Ever tried, ever failed."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 2.84,
+            "latency_ms": 603.8,
+            "text": "No matter, try again."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 3.64,
+            "latency_ms": 619.0,
+            "text": "Fail again. Fail better."
+          }
+        ]
+      },
+      {
+        "sample_id": "L02_11s",
+        "duration_sec": 11.09,
+        "chunk_count": 4,
+        "avg_chunk_sec": 2.77,
+        "chunk_p50_ms": 540.2,
+        "chunk_p95_ms": 689.3,
+        "chunk_max_ms": 713.2,
+        "total_latency_ms": 1796.7,
+        "rtf": 0.162,
+        "wer": 0.0,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "payment queue",
+          "latency spikes",
+          "deployment checklist",
+          "stakeholders"
+        ],
+        "predicted_text": "From a technical perspective, decoupling the- payment queue reduces latency spikes during peak traffic. Next week we will review the deployment checklist with all stakeholders.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.68,
+            "latency_ms": 713.2,
+            "text": "From a technical perspective, decoupling the-"
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 3.32,
+            "latency_ms": 553.6,
+            "text": "payment queue reduces latency spikes during peak traffic."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 4.44,
+            "latency_ms": 526.8,
+            "text": "Next week we will review the deployment checklist with all stakeholders."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 0.65,
+            "latency_ms": 2.5,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "sample_id": "L03_26s",
+        "duration_sec": 26.48,
+        "chunk_count": 8,
+        "avg_chunk_sec": 3.31,
+        "chunk_p50_ms": 517.4,
+        "chunk_p95_ms": 566.8,
+        "chunk_max_ms": 573.0,
+        "total_latency_ms": 4163.1,
+        "rtf": 0.157,
+        "wer": 0.0656,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "sliding window",
+          "WebRTC",
+          "rollback strategy",
+          "acceptance criteria"
+        ],
+        "predicted_text": "Let me share a quick update on our Sprint progress. We finished profiling the local inference pipeline and verif. that are sliding window keeps memory usage stable below the target threshold. However, we noticed minor latency fluctuations when multiple browser tabs run WebRTC. WebRTC calls simultaneously. So we are preparing a rollback strategy and finalizing the acceptance criteria. criteria before our release demo.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 3.08,
+            "latency_ms": 517.7,
+            "text": "Let me share a quick update on our Sprint progress."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 3.8,
+            "latency_ms": 498.4,
+            "text": "We finished profiling the local inference pipeline and verif."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 4.52,
+            "latency_ms": 555.3,
+            "text": "that are sliding window keeps memory usage stable below the target threshold."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 2.2,
+            "latency_ms": 466.6,
+            "text": "However, we noticed"
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 3.96,
+            "latency_ms": 517.0,
+            "text": "minor latency fluctuations when multiple browser tabs run WebRTC."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 2.12,
+            "latency_ms": 507.2,
+            "text": "WebRTC calls simultaneously."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 4.12,
+            "latency_ms": 573.0,
+            "text": "So we are preparing a rollback strategy and finalizing the acceptance criteria."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 2.67,
+            "latency_ms": 526.4,
+            "text": "criteria before our release demo."
+          }
+        ]
+      },
+      {
+        "sample_id": "L04_42s",
+        "duration_sec": 41.82,
+        "chunk_count": 12,
+        "avg_chunk_sec": 3.49,
+        "chunk_p50_ms": 543.2,
+        "chunk_p95_ms": 3093.0,
+        "chunk_max_ms": 6045.5,
+        "total_latency_ms": 12148.0,
+        "rtf": 0.29,
+        "wer": 0.1,
+        "term_hit_rate": 1.0,
+        "matched_terms": [
+          "prefix pinning",
+          "domain terminology",
+          "speech recognition"
+        ],
+        "predicted_text": "Before we lock the architecture for the prototype. I want to walk through three critical risks we discovered during testing. first if the local speech recognition buffer grows unbounded over a 60 minute meeting. Memory consumption can spike unexpectedly and degrade video call frame rates. 2. Network Dependent speech services introduce unpredictable delays above 500 milliseconds. Breaking the natural conversational rhythm. 3. Speakers often pause briefly mid-sentence while searching for a few minutes. for precise domain terminology. so keeping prefix pinning active ensures the model prioritizes. Project vocabulary without duplicating context memory.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.76,
+            "latency_ms": 499.0,
+            "text": "Before we lock the architecture for the prototype."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 3.88,
+            "latency_ms": 580.7,
+            "text": "I want to walk through three critical risks we discovered during testing."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.36,
+            "latency_ms": 6045.5,
+            "text": "first if the local"
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 3.72,
+            "latency_ms": 521.0,
+            "text": "speech recognition buffer grows unbounded over a 60 minute meeting."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 4.92,
+            "latency_ms": 525.0,
+            "text": "Memory consumption can spike unexpectedly and degrade video call frame rates."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 2.12,
+            "latency_ms": 472.4,
+            "text": "2. Network"
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 4.92,
+            "latency_ms": 624.4,
+            "text": "Dependent speech services introduce unpredictable delays above 500 milliseconds."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 2.68,
+            "latency_ms": 516.8,
+            "text": "Breaking the natural conversational rhythm."
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 4.52,
+            "latency_ms": 610.1,
+            "text": "3. Speakers often pause briefly mid-sentence while searching for a few minutes."
+          },
+          {
+            "chunk_index": 10,
+            "chunk_sec": 2.04,
+            "latency_ms": 512.3,
+            "text": "for precise domain terminology."
+          },
+          {
+            "chunk_index": 11,
+            "chunk_sec": 3.88,
+            "latency_ms": 561.3,
+            "text": "so keeping prefix pinning active ensures the model prioritizes."
+          },
+          {
+            "chunk_index": 12,
+            "chunk_sec": 4.02,
+            "latency_ms": 677.2,
+            "text": "Project vocabulary without duplicating context memory."
+          }
+        ]
+      },
+      {
+        "sample_id": "L05_20s",
+        "duration_sec": 20.27,
+        "chunk_count": 6,
+        "avg_chunk_sec": 3.38,
+        "chunk_p50_ms": 566.7,
+        "chunk_p95_ms": 600.2,
+        "chunk_max_ms": 608.7,
+        "total_latency_ms": 3326.4,
+        "rtf": 0.164,
+        "wer": 0.8,
+        "term_hit_rate": 0.5,
+        "matched_terms": [
+          "respected instructor",
+          "ARP Poisoning",
+          "Cisco Enterprise Defense"
+        ],
+        "predicted_text": "ARP Poisoning, MITM Good morning, everyone, respected instructor and fellow. First fellow plus my, my name is William McCrum. I'm the host, William McCrum. I own it too well from everyone to us. I own it too well. and Cisco Enterprise Defense.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.36,
+            "latency_ms": 568.5,
+            "text": "ARP Poisoning, MITM"
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.04,
+            "latency_ms": 564.9,
+            "text": "Good morning, everyone, respected instructor and fellow."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.28,
+            "latency_ms": 608.7,
+            "text": "First fellow plus my, my name is William McCrum."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 3.96,
+            "latency_ms": 574.8,
+            "text": "I'm the host, William McCrum. I own it too well from everyone to us."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 4.92,
+            "latency_ms": 458.6,
+            "text": "I own it too well."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 2.71,
+            "latency_ms": 549.9,
+            "text": "and Cisco Enterprise Defense."
+          }
+        ]
+      },
+      {
+        "sample_id": "L06_76s",
+        "duration_sec": 74.69,
+        "chunk_count": 22,
+        "avg_chunk_sec": 3.39,
+        "chunk_p50_ms": 538.7,
+        "chunk_p95_ms": 592.1,
+        "chunk_max_ms": 2825.8,
+        "total_latency_ms": 14060.4,
+        "rtf": 0.188,
+        "wer": 0.6903,
+        "term_hit_rate": 0.6923,
+        "matched_terms": [
+          "ARP",
+          "Ethernet network",
+          "Host A",
+          "Layer 2",
+          "MAC address",
+          "ARP Request",
+          "broadcast domain",
+          "ARP Reply",
+          "ARP table"
+        ],
+        "predicted_text": "To understand how to suggest we morph. We might first look at... how ARP already took another normal site. so come stay in an Ethernet network. one, two, come to the cable. one, is now the Gateway RBI address. Well, this cannot be a Layer 2 frame with... without the... that you need... that... the tenation must... uh... my... password... uh... therefore, host a broadcast and ARP request... across the entire broadcast domain askin. Who has... That's the idea. Tell me MAC address. So, going right to R1, let's re-sleep this. It's unicast and ARP reply containing... ...is the app where I press. And host a cat this mapping in its... ARP table. ...uh, I've been playing... ...a clear intention to the right style of this line. ...to the right side.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 2.04,
+            "latency_ms": 2825.8,
+            "text": ""
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.28,
+            "latency_ms": 517.8,
+            "text": "To understand how to suggest we morph."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.04,
+            "latency_ms": 468.8,
+            "text": "We might first look at..."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 4.84,
+            "latency_ms": 548.0,
+            "text": "how ARP already took another normal site."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 3.8,
+            "latency_ms": 550.4,
+            "text": "so come stay in an Ethernet network."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 3.08,
+            "latency_ms": 549.1,
+            "text": "one, two, come to the cable."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 4.12,
+            "latency_ms": 548.4,
+            "text": "one, is now the Gateway RBI address."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 3.48,
+            "latency_ms": 513.9,
+            "text": "Well, this cannot be a Layer 2 frame with..."
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 3.88,
+            "latency_ms": 543.6,
+            "text": "without the... that you need... that..."
+          },
+          {
+            "chunk_index": 10,
+            "chunk_sec": 3.0,
+            "latency_ms": 480.6,
+            "text": "the tenation must..."
+          },
+          {
+            "chunk_index": 11,
+            "chunk_sec": 2.36,
+            "latency_ms": 514.0,
+            "text": "uh... my... password..."
+          },
+          {
+            "chunk_index": 12,
+            "chunk_sec": 3.72,
+            "latency_ms": 565.8,
+            "text": "uh... therefore, host a broadcast and ARP request..."
+          },
+          {
+            "chunk_index": 13,
+            "chunk_sec": 4.12,
+            "latency_ms": 571.6,
+            "text": "across the entire broadcast domain askin. Who has..."
+          },
+          {
+            "chunk_index": 14,
+            "chunk_sec": 3.64,
+            "latency_ms": 523.3,
+            "text": "That's the idea. Tell me MAC address."
+          },
+          {
+            "chunk_index": 15,
+            "chunk_sec": 4.44,
+            "latency_ms": 593.0,
+            "text": "So, going right to R1, let's re-sleep this."
+          },
+          {
+            "chunk_index": 16,
+            "chunk_sec": 3.72,
+            "latency_ms": 533.9,
+            "text": "It's unicast and ARP reply containing..."
+          },
+          {
+            "chunk_index": 17,
+            "chunk_sec": 2.12,
+            "latency_ms": 549.3,
+            "text": "...is the app where I press."
+          },
+          {
+            "chunk_index": 18,
+            "chunk_sec": 4.52,
+            "latency_ms": 510.6,
+            "text": "And host a cat this mapping in its..."
+          },
+          {
+            "chunk_index": 19,
+            "chunk_sec": 2.28,
+            "latency_ms": 524.5,
+            "text": "ARP table."
+          },
+          {
+            "chunk_index": 20,
+            "chunk_sec": 3.24,
+            "latency_ms": 530.6,
+            "text": "...uh, I've been playing..."
+          },
+          {
+            "chunk_index": 21,
+            "chunk_sec": 4.52,
+            "latency_ms": 576.3,
+            "text": "...a clear intention to the right style of this line."
+          },
+          {
+            "chunk_index": 22,
+            "chunk_sec": 1.45,
+            "latency_ms": 517.4,
+            "text": "...to the right side."
+          }
+        ]
+      },
+      {
+        "sample_id": "L07_33s",
+        "duration_sec": 33.94,
+        "chunk_count": 9,
+        "avg_chunk_sec": 3.77,
+        "chunk_p50_ms": 522.3,
+        "chunk_p95_ms": 561.0,
+        "chunk_max_ms": 570.3,
+        "total_latency_ms": 4670.0,
+        "rtf": 0.138,
+        "wer": 0.8667,
+        "term_hit_rate": 0.8,
+        "matched_terms": [
+          "myself",
+          "Sunday",
+          "journey",
+          "write"
+        ],
+        "predicted_text": "Okay, so now I will talk about myself. In a few days. So... I'll play. For myself, in Sunday, I will be writing some... uh... journey, uh... up my day. uh... but I forget it. and I don't write anything and you don't talk about it. Mmm.",
+        "chunks": [
+          {
+            "chunk_index": 1,
+            "chunk_sec": 4.92,
+            "latency_ms": 547.0,
+            "text": "Okay, so now I will talk about myself."
+          },
+          {
+            "chunk_index": 2,
+            "chunk_sec": 4.76,
+            "latency_ms": 533.8,
+            "text": "In a few days. So..."
+          },
+          {
+            "chunk_index": 3,
+            "chunk_sec": 2.36,
+            "latency_ms": 486.5,
+            "text": "I'll play."
+          },
+          {
+            "chunk_index": 4,
+            "chunk_sec": 4.52,
+            "latency_ms": 570.3,
+            "text": "For myself, in Sunday, I will be writing some..."
+          },
+          {
+            "chunk_index": 5,
+            "chunk_sec": 2.76,
+            "latency_ms": 454.9,
+            "text": "uh..."
+          },
+          {
+            "chunk_index": 6,
+            "chunk_sec": 4.12,
+            "latency_ms": 522.3,
+            "text": "journey, uh... up my day."
+          },
+          {
+            "chunk_index": 7,
+            "chunk_sec": 3.4,
+            "latency_ms": 496.7,
+            "text": "uh... but I forget it."
+          },
+          {
+            "chunk_index": 8,
+            "chunk_sec": 4.12,
+            "latency_ms": 546.3,
+            "text": "and I don't write anything and you don't talk about it."
+          },
+          {
+            "chunk_index": 9,
+            "chunk_sec": 2.98,
+            "latency_ms": 510.5,
+            "text": "Mmm."
+          }
+        ]
+      }
+    ]
+  }
+]
